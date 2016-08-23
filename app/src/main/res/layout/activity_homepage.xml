@@ -9,58 +9,82 @@
         android:layout_height="match_parent">
 
 
-        <LinearLayout
-            android:id="@+id/homepage_bottom"
+        <RadioGroup
+            android:id="@+id/homepage_radiogroup"
             android:layout_width="match_parent"
-            android:layout_height="54dp"
+            android:layout_height="60dp"
             android:layout_alignParentBottom="true"
-            android:background="@color/black"
+            android:background="@color/maincolor"
             android:orientation="horizontal">
 
-            <ImageView
+            <RadioButton
+                android:id="@+id/shouye"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
+                android:layout_marginTop="7dp"
                 android:layout_weight="1"
-                android:src="@mipmap/main_shou_ye_zhi_ye" />
+                android:button="@null"
+                android:drawableTop="@mipmap/main_shou_ye_zhi_ye" />
 
-            <ImageView
+            <RadioButton
+                android:id="@+id/xiaoxi"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
+                android:layout_marginTop="7dp"
                 android:layout_weight="1"
-                android:src="@mipmap/main_shou_ye_xiao_xi_not_select" />
+                android:button="@null"
+                android:drawableTop="@mipmap/main_shou_ye_xiao_xi_not_select" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:button="@null" />
 
-            <ImageView
+            <RadioButton
+                android:id="@+id/pengyou"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
+                android:layout_marginTop="7dp"
                 android:layout_weight="1"
-                android:src="@mipmap/main_shou_ye_lu_you_quan_not_select" />
+                android:button="@null"
+                android:drawableTop="@mipmap/main_shou_ye_lu_you_quan_not_select" />
 
-            <ImageView
+            <RadioButton
+                android:id="@+id/wode"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
+                android:layout_marginTop="7dp"
                 android:layout_weight="1"
-                android:src="@mipmap/main_shou_ye_wo_not_select" />
-        </LinearLayout>
+                android:button="@null"
+                android:drawableTop="@mipmap/main_shou_ye_wo_not_select" />
+        </RadioGroup>
 
 
         <android.support.v4.view.ViewPager
+            android:id="@+id/homepage_viewpager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@id/homepage_bottom"
-            android:text="sdsfsdgasgalkgjalkdgjal"
+            android:layout_above="@id/homepage_radiogroup"
             android:textColor="@color/black">
 
         </android.support.v4.view.ViewPager>
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/yuan"
+            android:padding="10dp"
+            android:src="@mipmap/bottom_logo"
+
+            />
 
     </RelativeLayout>
 </LinearLayout>

@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/luhai.iml" filepath="$PROJECT_DIR$/luhai.iml" />
+      <module fileurl="file://$PROJECT_DIR$/universal-image-loader-1.9.2-SNAPSHOT-with-sources/universal-image-loader-1.9.2-SNAPSHOT-with-sources.iml" filepath="$PROJECT_DIR$/universal-image-loader-1.9.2-SNAPSHOT-with-sources/universal-image-loader-1.9.2-SNAPSHOT-with-sources.iml" />
     </modules>
   </component>
 </project>
