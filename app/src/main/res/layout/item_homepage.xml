@@ -49,11 +49,11 @@
 
                     />
             </RelativeLayout>
-            <fragment
+   <!--   <fragment
                 android:id="@+id/fragment_cycle_viewpager_content"
-
+                android:name="com.king.luhai.Adapter.CycleViewPager"
                 android:layout_width="match_parent"
-                android:layout_height="180dip" />
+                android:layout_height="180dip" />-->
     <RelativeLayout
         android:layout_marginTop="7dp"
         android:layout_width="match_parent"
@@ -116,6 +116,16 @@
 
         </LinearLayout>
     </RelativeLayout>
+            <GridView
+                android:id="@+id/homepage_gridview"
+                android:layout_width="match_parent"
+                android:layout_height="147dp"
+                android:numColumns="2"
+                >
+
+            </GridView>
+
+
 
 
 
