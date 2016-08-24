@@ -38,12 +38,12 @@ public class MyData extends Activity {
             Map<String,Object> map=new HashMap<String, Object>();
             map.put("tx",R.mipmap.ic_launcher);
             map.put("ms","经典匹配");
-            map.put("ms","胜利");
-            map.put("ms","14");
-            map.put("ms","1");
-            map.put("ms","12");
-            map.put("ms","2月22日");
-            map.put("ms","14.22");
+            map.put("jg","胜利");
+            map.put("js","14");
+            map.put("sw","1");
+            map.put("zg","12");
+            map.put("rq","2月22日");
+            map.put("time","14.22");
             list.add(map);
         }
         return list;
