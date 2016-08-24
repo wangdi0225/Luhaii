@@ -34,15 +34,18 @@ public class MyData extends Activity {
         }
 
     public List<Map<String, Object>> getList() {
-        Map<String,Object> map=new HashMap<String, Object>();
-        map.put("tx",R.mipmap.ic_launcher);
-        map.put("ms","");
-        map.put("ms","");
-        map.put("ms","");
-        map.put("ms","");
-        map.put("ms","");
-        map.put("ms","");
-        map.put("ms","");
+        for (int i = 0; i <20 ; i++) {
+            Map<String,Object> map=new HashMap<String, Object>();
+            map.put("tx",R.mipmap.ic_launcher);
+            map.put("ms","经典匹配");
+            map.put("ms","胜利");
+            map.put("ms","14");
+            map.put("ms","1");
+            map.put("ms","12");
+            map.put("ms","2月22日");
+            map.put("ms","14.22");
+            list.add(map);
+        }
         return list;
     }
 }
