@@ -2,14 +2,12 @@ package com.king.luhai.Adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.res.Resources;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.king.luhai.Product.GridviewList;
@@ -20,11 +18,11 @@ import java.util.List;
 /**
  * Created by Administrator on 2016/8/24.
  */
-public class GridviewAdapter extends BaseAdapter {
+public class HomepageGridviewAdapter extends BaseAdapter {
     Context mContext;
     List<GridviewList> myList;
 
-    public GridviewAdapter(Context mContext) {
+    public HomepageGridviewAdapter(Context mContext) {
         super();
         this.mContext = mContext;
 
@@ -68,7 +66,7 @@ public class GridviewAdapter extends BaseAdapter {
         ViewHolder viewHolder = null;
 
         if (convertView == null) {
-            convertView = LayoutInflater.from(mContext).inflate(R.layout.item_gridview, null);
+            convertView = LayoutInflater.from(mContext).inflate(R.layout.item_homepagegridview, null);
             viewHolder = new ViewHolder();
             viewHolder.onetext = (TextView) convertView.findViewById(R.id.title);
             viewHolder.twotext = (TextView) convertView.findViewById(R.id.titletwo);
