@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">撸嗨</string>
+
+
+    <string name="regional">大区</string>
+    <string name="mainpage">主页</string>
+    <string name="tuijiankaihei">推荐开黑</string>
+    <string name="newfatie">最新发帖</string>
+
 </resources>
