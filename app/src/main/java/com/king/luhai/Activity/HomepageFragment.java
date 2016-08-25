@@ -180,7 +180,7 @@ public class HomepageFragment extends Fragment {
             what.getAndAdd(-4);
         }
         try {
-            Thread.sleep(5000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
 
         }
