@@ -3,4 +3,17 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="zhuse">#BB8B36</color>
+    <color name="beijingse">#F3F5F6</color>
+    <color name="miaobianse">#CFD1D1</color>
+    <color name="xiantiaose">#D9DBDD</color>
+    <color name="baise">#ffffff</color>
+    <color name="biaotise">#666666</color>
+    <color name="zengwense">#888888</color>
+    <color name="fubiaotise">#333333</color>
+    <color name="tupianbiaotise">#292C2A</color>
+    <color name="tubiaose1">#DDA339</color>
+    <color name="tubiaose2">#CDCDCD</color>
+
+
 </resources>

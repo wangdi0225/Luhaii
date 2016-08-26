@@ -4,11 +4,16 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logo2"
         android:label="@string/app_name"
         android:supportsRtl="true"
+<<<<<<< HEAD
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <activity android:name=".Activity.KaiHeiActivity">
+=======
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activity.ZHGuanLi">
+>>>>>>> develop
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
