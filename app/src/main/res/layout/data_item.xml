@@ -1,99 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/beijingse">
+    android:background="@color/beijingse"
+    android:orientation="horizontal">
+
     <LinearLayout
 
         android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_marginTop="1dp"
-        android:background="@color/baise"
         android:layout_height="50dp"
-        >
+        android:layout_marginTop="1dp"
+        android:layout_weight="1"
+        android:background="@color/baise">
+
         <ImageView
 
-            android:src="@mipmap/ic_launcher"
             android:id="@+id/data_item_tx"
             android:layout_width="50dp"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_launcher" />
+
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:orientation="vertical">
+
             <TextView
                 android:id="@+id/data_item_ms"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="1"
+                android:text="经典匹配"
                 android:textColor="@color/biaotise"
-                android:textSize="15sp"
-                android:text="经典匹配"/>
+                android:textSize="15sp" />
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:gravity="center_vertical">
+
                 <TextView
                     android:id="@+id/data_item_jg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/bj_shengli"
                     android:text="胜利"
-                    android:textSize="12sp"
                     android:textColor="@color/baise"
-                    android:background="@drawable/bj_shengli"/>
+                    android:textSize="12sp" />
+
                 <TextView
                     android:id="@+id/data_item_js"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
                     android:drawableLeft="@mipmap/jisha"
                     android:text="14"
-                    android:layout_marginLeft="5dp"
                     android:textColor="#08A087"
-                    android:textSize="12sp"/>
+                    android:textSize="12sp" />
+
                 <TextView
                     android:id="@+id/data_item_sw"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:drawableLeft="@mipmap/siwang"
                     android:text="1"
-                    android:layout_marginLeft="10dp"
                     android:textColor="#08A087"
-                    android:textSize="12sp"/>
+                    android:textSize="12sp" />
+
                 <TextView
                     android:id="@+id/data_item_zg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:drawableLeft="@mipmap/zhugong"
                     android:text="12"
-                    android:layout_marginLeft="10dp"
                     android:textColor="#08A087"
-                    android:textSize="12sp"/>
+                    android:textSize="12sp" />
             </LinearLayout>
         </LinearLayout>
+
+
         <LinearLayout
             android:layout_width="130dp"
             android:layout_height="match_parent">
+
             <TextView
                 android:id="@+id/data_item_rq"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:textSize="14sp"
+                android:gravity="center_vertical"
                 android:text="2月22日"
                 android:textColor="@color/zengwense"
-                android:gravity="center_vertical"/>
+                android:textSize="14sp" />
+
+
             <TextView
                 android:id="@+id/data_item_time"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:textSize="14sp"
-                android:text="14:22"
                 android:layout_marginLeft="10dp"
-                android:drawableRight="@mipmap/youjiantou"
                 android:drawablePadding="10dp"
+
+
+                android:drawableRight="@mipmap/youjiantou"
+                android:gravity="center_vertical"
+                android:text="14:22"
                 android:textColor="@color/zengwense"
-                android:gravity="center_vertical"/>
+                android:textSize="14sp" />
 
         </LinearLayout>
     </LinearLayout>
