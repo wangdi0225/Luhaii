@@ -87,7 +87,7 @@ public class SplashActivity extends Activity {
 	}
 
 	private void goGuide() {
-		Intent intent = new Intent(SplashActivity.this, SwitchActivity.class);
+		Intent intent = new Intent(SplashActivity.this, ViewPagerDemoActivity.class);
 		SplashActivity.this.startActivity(intent);
 		SplashActivity.this.finish();
 	}
