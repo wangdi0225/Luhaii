@@ -11,6 +11,10 @@ import android.widget.RadioGroup;
 
 import com.king.luhai.Adapter.HomepageAdapter;
 import com.king.luhai.R;
+import com.king.luhai.fragment.FriendFragment;
+import com.king.luhai.fragment.HomepageFragment;
+import com.king.luhai.fragment.MessageFragment;
+import com.king.luhai.fragment.MyFragment;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.king.luhai.activity;
+package com.king.luhai.fragment;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -21,8 +21,8 @@ import com.king.luhai.Adapter.HomepageListViewAdapter;
 import com.king.luhai.Fragment.Teampageone;
 import com.king.luhai.Fragment.Teampagethree;
 import com.king.luhai.Fragment.Teampagetwo;
-import com.king.luhai.Product.GridviewList;
-import com.king.luhai.Product.HomepageListview;
+import com.king.luhai.product.GridviewList;
+import com.king.luhai.product.HomepageListview;
 import com.king.luhai.R;
 
 import java.util.ArrayList;
