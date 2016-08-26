@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+       <ImageView
+           android:id="@+id/kaihei_user"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@mipmap/aamao"
+           android:layout_margin="10dp"
+
+           />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                >
+
+                <TextView
+                    android:id="@+id/kaihei_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="机器猫不吃鱼"
+                    android:layout_marginTop="10dp"
+
+                    />
+
+                <ImageView
+                    android:id="@+id/kaihei_xingbie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/girl"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginLeft="5dp"
+
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+
+                >
+
+                <TextView
+                    android:id="@+id/kaihei_daqu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="艾欧尼亚"
+                    android:textSize="12sp"
+                    android:layout_marginTop="3dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/kaihei_duanwei"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="铂金|||"
+                    android:textSize="12sp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="20dp"
+
+                    />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/kaihei_qianming"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="这世上没有什么我做不到的事"
+                    android:textSize="10sp"
+                    android:layout_marginTop="5dp"
+                    />
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"/>
+
+
+            <ImageView
+                android:id="@+id/kaihe_jiaru"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/add3"
+                android:layout_gravity="center"
+                android:layout_margin="12dp"
+                />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
