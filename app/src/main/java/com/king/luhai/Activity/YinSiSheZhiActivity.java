@@ -1,10 +1,9 @@
-package com.king.luhai.Activity;
+package com.king.luhai.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.king.luhai.R;
 

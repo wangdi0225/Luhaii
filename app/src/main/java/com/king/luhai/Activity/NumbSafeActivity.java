@@ -1,4 +1,4 @@
-package com.king.luhai.Activity;
+package com.king.luhai.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,11 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.king.luhai.R;
-
-import org.w3c.dom.Text;
 
 
 public class NumbSafeActivity extends Activity {

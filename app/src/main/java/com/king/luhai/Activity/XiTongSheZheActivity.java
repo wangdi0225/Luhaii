@@ -1,4 +1,4 @@
-package com.king.luhai.Activity;
+package com.king.luhai.activity;
 
 import android.app.Activity;
 import android.content.Intent;
