@@ -1,4 +1,4 @@
-package com.king.luhai.Activity;
+package com.king.luhai.activity;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
