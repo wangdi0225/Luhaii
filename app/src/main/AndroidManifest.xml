@@ -14,6 +14,19 @@
         android:theme="@style/AppTheme">
         <activity android:name=".activity.HomepageActivity"/>
 
+        <activity android:name=".activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.ViewPagerDemoActivity"/>
+        <activity android:name=".activity.SplashActivity"/>
+        <activity android:name=".activity.SigninActivity"/>
+        <activity android:name=".activity.VerifyActivity"/>
+        <activity android:name=".activity.QQzhucheActivity"/>
     </application>
+
+
 
 </manifest>
