@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="73dp">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="撸友新动态"
+        android:textSize="17sp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="10dp"
+
+        />
+    <TextView
+        android:id="@+id/titletwo"
+        android:layout_below="@id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="不错过每分钟消息"
+        android:textSize="14sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="9dp"
+
+        />
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="73dp"
+        android:src="@mipmap/amumu"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        />
+
+</RelativeLayout>

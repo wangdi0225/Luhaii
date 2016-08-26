@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                <!-- ViewPager是一个控件 -->
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/adv_pager"
+                    android:layout_width="fill_parent"
+                    android:layout_height="168dp" >
+
+                </android.support.v4.view.ViewPager>
+                <LinearLayout
+                    android:id="@+id/viewGroup"
+                    android:layout_below="@id/adv_pager"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-25px"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+        android:layout_marginTop="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/kaihei"
+        >
+        <TextView
+            android:id="@+id/tuijiankaihei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tuijiankaihei"
+            android:padding="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="6dp"
+            android:textSize="16sp"
+            />
+        <LinearLayout
+            android:layout_toRightOf="@id/tuijiankaihei"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@mipmap/kaihei1"
+                />
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@mipmap/kaihei2"
+                android:layout_marginLeft="6dp"
+                />
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@mipmap/kaihei3"
+                android:layout_marginLeft="6dp"
+                />
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@mipmap/kaihei4"
+                android:layout_marginLeft="6dp"
+                />
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@mipmap/kaihei5"
+                android:layout_marginLeft="6dp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/kaiheimore"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center_vertical"
+                />
+
+        </LinearLayout>
+    </RelativeLayout>
+            <GridView
+                android:id="@+id/homepage_gridview"
+                android:layout_width="match_parent"
+                android:layout_height="147dp"
+                android:numColumns="2"
+                >
+
+            </GridView>
+            <android.support.v4.view.ViewPager
+                android:id="@+id/team_viewpager"
+                android:layout_width="wrap_content"
+                android:layout_height="240dp">
+
+            </android.support.v4.view.ViewPager>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/newfatie"
+                android:textSize="16sp"
+                android:layout_marginTop="12dp"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:drawableLeft="@mipmap/newfatie"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/white"
+                />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
