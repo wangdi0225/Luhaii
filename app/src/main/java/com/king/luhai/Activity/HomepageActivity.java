@@ -38,6 +38,7 @@ public class HomepageActivity extends FragmentActivity {
         viewPager.setAdapter(homepageAdapter);
         radiogroup = (RadioGroup) findViewById(R.id.homepage_radiogroup);
         viewPager.setOnPageChangeListener(onPageChangeListener);
+        viewPager.setOffscreenPageLimit(4);
         radiogroup.setOnCheckedChangeListener(onCheckedChangeListener);
 
     }

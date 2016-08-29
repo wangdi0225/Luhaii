@@ -1,4 +1,4 @@
-package com.king.luhai.adapter;
+package com.king.luhai.Adapter;
 
 import android.app.Activity;
 import android.content.Context;
