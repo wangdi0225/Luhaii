@@ -22,6 +22,7 @@
             android:orientation="horizontal"
             >
         <TextView
+            android:id="@+id/xiaoxi"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
@@ -31,6 +32,7 @@
             android:textColor="@color/huise"
             />
             <TextView
+                android:id="@+id/haoyou"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
@@ -53,82 +55,11 @@
 
           />
     </RelativeLayout>
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/search"
-        android:hint="@string/search"
-        android:maxLength="20"
-        android:imeOptions="actionDone"
-        android:singleLine="true"
-        android:drawableLeft="@mipmap/sousuo"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:paddingLeft="30dp"
-        android:layout_marginTop="10dp"
-        android:paddingRight="30dp"
-        />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        >
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/yousanjiao"
-            android:layout_gravity="center"
-            android:layout_marginLeft="32dp"
-            />
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:text="@string/yueheifriend"
-            android:gravity="center_vertical"
-            android:layout_marginLeft="30dp"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="0"
-            android:textSize="16sp"
-            android:layout_marginRight="20dp"
-            android:gravity="center"
+<FrameLayout
+    android:id="@+id/fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    />
 
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        >
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/yousanjiao"
-            android:layout_gravity="center"
-            android:layout_marginLeft="32dp"
-            />
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:text="@string/gamefriend"
-            android:gravity="center_vertical"
-            android:layout_marginLeft="30dp"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="@string/aiouniya"
-            android:textSize="16sp"
-            android:layout_marginRight="20dp"
-            android:gravity="center"
-
-            />
-    </LinearLayout>
-
-    
 </LinearLayout>

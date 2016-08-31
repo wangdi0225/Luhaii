@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -19,6 +20,7 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.king.luhai.Adapter.HomepageAdapter;
 import com.king.luhai.Adapter.HomepageGridviewAdapter;
@@ -118,7 +120,7 @@ public class HomepageFragment extends Fragment {
         public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.region:
-                   // change();
+                    change();
 
                     break;
 
@@ -135,27 +137,10 @@ public class HomepageFragment extends Fragment {
         list1.setAdapter(regoinAdapter);
         listView.removeHeaderView(header);
         homepageListViewAdapter.setData(null);
-        handler.sendEmptyMessage(0);
 
     }
-    RegoinList regoinList = new RegoinList();
-    Handler handler = new Handler(){
-        @Override
-        public void handleMessage(Message msg) {
 
 
-                for (int i = 0; i < dianxqu.length; i++) {
-                    Map<String, Object> map = new HashMap<String, Object>();
-                    map.put("name", dianxqu[i]);
-
-                    regoninlist.add(map);
-                }
-
-                list2.setAdapter(simpleAdapter);
-
-
-        }
-    };
 
 
     private void addregoinlist() {

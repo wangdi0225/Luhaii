@@ -8,5 +8,5 @@ import java.io.Serializable;
 public class RegoinList implements Serializable {
     public String name;
     public boolean ischeck;
-    public int posin ;
+
 }
