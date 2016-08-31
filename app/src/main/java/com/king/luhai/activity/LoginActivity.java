@@ -18,7 +18,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.king.luhai.R;
-import com.nostra13.universalimageloader.cache.disc.impl.TotalSizeLimitedDiscCache;
 
 import org.json.JSONException;
 import org.json.JSONObject;

@@ -1,4 +1,4 @@
-package com.king.luhai.Adapter;
+package com.king.luhai.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Adapter;
 import android.widget.TextView;
 
-import com.king.luhai.Product.ChartMessage;
+import com.king.luhai.product.ChartMessage;
 import com.king.luhai.R;
 
 import java.util.List;
@@ -18,7 +18,7 @@ public class CharttingAdapter extends Adapter {
     private Context context;
     private List<ChartMessage> chartMessages;
 
-    public ChattingAdapter(Context context, List<ChartMessage> messages) {
+    public CharttingAdapter(Context context, List<ChartMessage> messages) {
         super();
         this.context = context;
         this.chartMessages = messages;
