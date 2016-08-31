@@ -11,10 +11,10 @@ import android.widget.RadioGroup;
 
 import com.king.luhai.Adapter.HomepageAdapter;
 import com.king.luhai.R;
-import com.king.luhai.fragment.FriendFragment;
-import com.king.luhai.fragment.HomepageFragment;
-import com.king.luhai.fragment.MessageFragment;
-import com.king.luhai.fragment.MyFragment;
+import com.king.luhai.Fragment.FriendFragment;
+import com.king.luhai.Fragment.HomepageFragment;
+import com.king.luhai.Fragment.MessageFragment;
+import com.king.luhai.Fragment.MyFragment;
 
 import java.util.ArrayList;
 
@@ -42,6 +42,7 @@ public class HomepageActivity extends FragmentActivity {
         viewPager.setAdapter(homepageAdapter);
         radiogroup = (RadioGroup) findViewById(R.id.homepage_radiogroup);
         viewPager.setOnPageChangeListener(onPageChangeListener);
+        viewPager.setOffscreenPageLimit(4);
         radiogroup.setOnCheckedChangeListener(onCheckedChangeListener);
 
     }

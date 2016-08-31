@@ -96,7 +96,6 @@
                 android:layout_marginLeft="20dp"
                 android:layout_gravity="center_vertical"
                 />
-
         </LinearLayout>
     </RelativeLayout>
             <GridView
@@ -105,13 +104,13 @@
                 android:layout_height="147dp"
                 android:numColumns="2"
                 >
-
             </GridView>
             <android.support.v4.view.ViewPager
                 android:id="@+id/team_viewpager"
                 android:layout_width="wrap_content"
-                android:layout_height="240dp">
-
+                android:layout_height="240dp"
+                android:clipChildren="false"
+                >
             </android.support.v4.view.ViewPager>
 
 

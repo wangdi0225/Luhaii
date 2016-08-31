@@ -18,7 +18,7 @@
             android:id="@+id/image_timo"
             android:layout_width="100dp"
             android:layout_height="155dp"
-            android:src="@mipmap/timo"
+            android:src="@mipmap/timod"
             />
 
         <TextView

@@ -10,7 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.king.luhai.product.GridviewList;
+import com.king.luhai.Product.GridviewList;
 import com.king.luhai.R;
 
 import java.util.List;

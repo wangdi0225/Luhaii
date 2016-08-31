@@ -9,6 +9,7 @@
         android:background="@color/maincolor">
 
         <TextView
+            android:id="@+id/region"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -38,12 +39,43 @@
 
             />
     </RelativeLayout>
-    <ListView
-        android:id="@+id/homepage_listview"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:divider="@color/zhuhui"
-        android:dividerHeight="8dp"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        >
 
-    </ListView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            <ListView
+                android:id="@+id/list1"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:dividerHeight="0dp"
+                android:layout_height="match_parent">
+
+            </ListView>
+            <ListView
+                android:id="@+id/list2"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+            </ListView>
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/homepage_listview"
+            android:layout_width="match_parent"
+            android:divider="@color/zhuhui"
+            android:dividerHeight="8dp"
+            android:layout_height="wrap_content">
+
+        </ListView>
+
+
+    </RelativeLayout>
 </LinearLayout>
