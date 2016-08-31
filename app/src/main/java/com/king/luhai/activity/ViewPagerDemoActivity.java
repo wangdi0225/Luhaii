@@ -12,7 +12,7 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.king.luhai.Adapter.ViewPagerAdapter;
+import com.king.luhai.adapter.ViewPagerAdapter;
 import com.king.luhai.R;
 
 

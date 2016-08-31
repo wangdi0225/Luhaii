@@ -1,4 +1,4 @@
-package com.king.luhai.Adapter;
+package com.king.luhai.adapter;
 
 import android.app.Activity;
 import android.graphics.Bitmap;
@@ -9,7 +9,7 @@ import android.widget.AbsListView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
-import com.king.luhai.Product.SysUtils;
+import com.king.luhai.product.SysUtils;
 import com.king.luhai.R;
 
 import net.tsz.afinal.FinalBitmap;

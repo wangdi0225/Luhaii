@@ -1,4 +1,4 @@
-package com.king.luhai.Product;
+package com.king.luhai.product;
 
 import java.io.Serializable;
 

@@ -1,4 +1,4 @@
-package com.king.luhai.Adapter;
+package com.king.luhai.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -11,8 +11,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.king.luhai.Product.GridviewList;
-import com.king.luhai.Product.RegoinList;
+import com.king.luhai.product.GridviewList;
+import com.king.luhai.product.RegoinList;
 import com.king.luhai.R;
 
 

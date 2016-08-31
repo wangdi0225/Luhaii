@@ -1,4 +1,4 @@
-package com.king.luhai.Adapter;
+package com.king.luhai.adapter;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -15,10 +15,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.king.luhai.Product.Friendlist;
-import com.king.luhai.Product.MyGridView;
-import com.king.luhai.Product.RegoinList;
-import com.king.luhai.Product.SysUtils;
+import com.king.luhai.product.Friendlist;
+import com.king.luhai.product.MyGridView;
+import com.king.luhai.product.RegoinList;
+import com.king.luhai.product.SysUtils;
 import com.king.luhai.R;
 
 import net.tsz.afinal.FinalBitmap;
