@@ -15,12 +15,9 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListView;
 
-import com.king.luhai.Adapter.HomepageAdapter;
-import com.king.luhai.Adapter.HomepageGridviewAdapter;
-import com.king.luhai.Adapter.HomepageListViewAdapter;
-import com.king.luhai.Fragment.Teampageone;
-import com.king.luhai.Fragment.Teampagethree;
-import com.king.luhai.Fragment.Teampagetwo;
+import com.king.luhai.adapter.HomepageAdapter;
+import com.king.luhai.adapter.HomepageGridviewAdapter;
+import com.king.luhai.adapter.HomepageListViewAdapter;
 import com.king.luhai.product.GridviewList;
 import com.king.luhai.product.HomepageListview;
 import com.king.luhai.R;

@@ -38,7 +38,7 @@ public class ViewPagerDemoActivity extends Activity implements OnClickListener, 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.buju);
+        setContentView(R.layout.guide);
 
         views = new ArrayList<View>();
 
@@ -57,8 +57,7 @@ public class ViewPagerDemoActivity extends Activity implements OnClickListener, 
         vpAdapter = new ViewPagerAdapter(views);
         vp.setAdapter(vpAdapter);
         //绑定回调
-        vp.setOnPageChangeListener(this);
-
+        vp.setOnPageChangeListener(ViewPagerDemoActivity.this);
         //初始化底部小点
         initDots();
 
@@ -66,7 +65,6 @@ public class ViewPagerDemoActivity extends Activity implements OnClickListener, 
 
     private void initDots() {
         LinearLayout ll = (LinearLayout) findViewById(R.id.ll);
-
         dots = new ImageView[pics.length];
 
         //循环取得小点图片

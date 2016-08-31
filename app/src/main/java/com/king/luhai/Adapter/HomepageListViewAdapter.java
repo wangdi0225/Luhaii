@@ -1,4 +1,4 @@
-package com.king.luhai.Adapter;
+package com.king.luhai.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
