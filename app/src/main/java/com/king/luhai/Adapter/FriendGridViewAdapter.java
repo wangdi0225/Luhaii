@@ -13,6 +13,8 @@ import com.king.luhai.product.SysUtils;
 import com.king.luhai.R;
 
 
+import net.tsz.afinal.FinalBitmap;
+
 import java.util.ArrayList;
 
 /**
