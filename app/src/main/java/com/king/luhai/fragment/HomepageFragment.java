@@ -1,4 +1,5 @@
 package com.king.luhai.fragment;
+
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -13,12 +14,14 @@ import android.view.ViewGroup;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListView;
+
 import com.king.luhai.adapter.HomepageAdapter;
 import com.king.luhai.adapter.HomepageGridviewAdapter;
 import com.king.luhai.adapter.HomepageListViewAdapter;
 import com.king.luhai.adapter.RegoinAdapter;
 import com.king.luhai.product.GridviewList;
 import com.king.luhai.product.HomepageListview;
+
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
@@ -52,10 +55,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class HomepageFragment extends Fragment {
     private HomepageGridviewAdapter homepageGridviewAdapter;
     private HomepageListViewAdapter homepageListViewAdapter;
-    private ListView listView, list1, list2;
+    private ListView listView;
     private GridView gridview;
     private View header;
-    private List<RegoinList> regoinLists = new ArrayList<RegoinList>();
     private List<HomepageListview> listlists = new ArrayList<HomepageListview>();
     private List<GridviewList> gridlist = new ArrayList<GridviewList>();
     private String[] name = {"猪哥我爱你", "本萌妹超厉害"};
@@ -83,17 +85,11 @@ public class HomepageFragment extends Fragment {
     private AtomicInteger what = new AtomicInteger(0);
     private boolean isContinue = true;
     private HomepageAdapter homepageAdapter;
-    private RegoinAdapter regoinAdapter;
     private ViewPager viewPager;
-    private TextView regoin;
-    private SimpleAdapter simpleAdapter;
-    private List<Map<String, Object>> regoninlist;
-
-
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.item_homepagetitle, container, false);
+        View v = inflater.inflate(R.layout.item_homepagetitleone, container, false);
         header = LayoutInflater.from(getActivity()).inflate(
                 R.layout.item_homepage, null);
 
@@ -103,16 +99,9 @@ public class HomepageFragment extends Fragment {
         viewPager.setAdapter(homepageAdapter);
         gridview = (GridView) header.findViewById(R.id.homepage_gridview);
         listView = (ListView) v.findViewById(R.id.homepage_listview);
-        regoin = (TextView) v.findViewById(R.id.region);
-        regoin.setOnClickListener(onClickListener);
         listView.addHeaderView(header);
-        list1 = (ListView) v.findViewById(R.id.list1);
-        list2 = (ListView) v.findViewById(R.id.list2);
         homepageListViewAdapter = new HomepageListViewAdapter(getActivity());
-        regoinAdapter = new RegoinAdapter(getActivity());
         homepageGridviewAdapter = new HomepageGridviewAdapter(getActivity());
-        regoninlist=new ArrayList<Map<String,Object>>();
-        simpleAdapter = new SimpleAdapter(getActivity(), regoninlist, R.layout.ite_goincg, from, to);
         listView.setAdapter(homepageListViewAdapter);
         gridview.setAdapter(homepageGridviewAdapter);
         addlist();
@@ -121,47 +110,10 @@ public class HomepageFragment extends Fragment {
         return v;
     }
 
-    View.OnClickListener onClickListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            switch (v.getId()) {
-                case R.id.region:
-                    change();
-
-                    break;
-
-
-                default:
-                    break;
-            }
-
-        }
-    };
-
-    private void change() {
-        addregoinlist();
-        list1.setAdapter(regoinAdapter);
-        listView.removeHeaderView(header);
-        homepageListViewAdapter.setData(null);
-
-    }
-
-
-
-
-    private void addregoinlist() {
-        for (int i = 0; i < 4; i++) {
-            RegoinList regoinList = new RegoinList();
-            regoinList.name = regoinlist[i];
-
-            regoinLists.add(regoinList);
-        }
-        regoinAdapter.setData(regoinLists);
-    }
-
-
     private void adddate() {
         fragmentlist = new ArrayList<Fragment>();
+
+        
         Teampageone teampageone = new Teampageone();
         fragmentlist.add(teampageone);
         Teampagetwo teampagetwo = new Teampagetwo();
