@@ -15,7 +15,7 @@
         >
 
         <ImageView
-            android:id="@+id/image_timo"
+            android:id="@+id/image_timos"
             android:layout_width="100dp"
             android:layout_height="155dp"
             android:src="@mipmap/timod"
@@ -26,7 +26,7 @@
             android:id="@+id/renwu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/image_timo"
+            android:layout_alignBottom="@id/image_timos"
             android:layout_marginLeft="3dp"
             android:alpha="0.6"
             android:background="@drawable/dibukuang"
