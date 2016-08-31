@@ -55,7 +55,8 @@ public class LoginActivity extends Activity{
                     Toast.makeText(LoginActivity.this,"头像",Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.denglu_denglu:
-                    Toast.makeText(LoginActivity.this,"头像",Toast.LENGTH_SHORT).show();
+                    intent.setClass(LoginActivity.this,HomepageActivity.class);
+                    startActivity(intent);
                     break;
                 case R.id.denglu_zhuche:
                    intent.setClass(LoginActivity.this,SigninActivity.class);

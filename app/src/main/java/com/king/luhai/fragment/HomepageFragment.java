@@ -13,9 +13,17 @@ import android.view.ViewGroup;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListView;
+import com.king.luhai.adapter.HomepageAdapter;
+import com.king.luhai.adapter.HomepageGridviewAdapter;
+import com.king.luhai.adapter.HomepageListViewAdapter;
+import com.king.luhai.adapter.RegoinAdapter;
+import com.king.luhai.product.GridviewList;
+import com.king.luhai.product.HomepageListview;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+
 import android.widget.Toast;
+
 import com.king.luhai.adapter.HomepageAdapter;
 import com.king.luhai.adapter.HomepageGridviewAdapter;
 import com.king.luhai.adapter.HomepageListViewAdapter;
@@ -28,7 +36,9 @@ import com.king.luhai.product.HomepageListview;
 import com.king.luhai.product.GridviewList;
 import com.king.luhai.product.HomepageListview;
 import com.king.luhai.product.RegoinList;
+
 import com.king.luhai.R;
+import com.king.luhai.product.RegoinList;
 
 import java.util.AbstractList;
 import java.util.ArrayList;

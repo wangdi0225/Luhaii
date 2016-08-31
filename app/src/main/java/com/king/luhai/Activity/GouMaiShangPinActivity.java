@@ -40,7 +40,11 @@ public class GouMaiShangPinActivity extends Activity {
     public List<Map<String, Object>> getLists() {
 
         Map<String, Object> map = new HashMap<String, Object>();
+<<<<<<< HEAD
+        map.put("images", R.mipmap.timo1);
+=======
         map.put("images", R.mipmap.timod);
+>>>>>>> 70339040c3fb39bdff85e832c3ba5f2432bff6ca
         map.put("mingzi", "迅捷斥候");
         map.put("jiage", "500");
         lists.add(map);

@@ -17,7 +17,6 @@ import com.king.luhai.R;
 import com.king.luhai.product.RegoinList;
 import com.king.luhai.R;
 
-
 import java.util.List;
 
 /**

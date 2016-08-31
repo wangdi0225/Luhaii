@@ -9,7 +9,8 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/afinal_0.5.1_bin" />
+            <option value="$PROJECT_DIR$/SMSSDK-2.1.1" />
+            <option value="$PROJECT_DIR$/SMSSDKGUI-2.1.1" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/universal-image-loader-1.9.2-SNAPSHOT-with-sources" />
           </set>
@@ -17,7 +18,8 @@
         <option name="myModules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/afinal_0.5.1_bin" />
+            <option value="$PROJECT_DIR$/SMSSDK-2.1.1" />
+            <option value="$PROJECT_DIR$/SMSSDKGUI-2.1.1" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/universal-image-loader-1.9.2-SNAPSHOT-with-sources" />
           </set>

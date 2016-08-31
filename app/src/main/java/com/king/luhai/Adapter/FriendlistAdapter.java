@@ -15,11 +15,13 @@ import com.king.luhai.product.MyGridView;
 import com.king.luhai.product.RegoinList;
 import com.king.luhai.product.SysUtils;
 import com.king.luhai.R;
+
 import net.tsz.afinal.FinalBitmap;
+
 import java.util.ArrayList;
 import java.util.List;
 /**
- * Created by Administrator on 2016/8/30.
+ * Created by Adminaistrator on 2016/8/30.
  */
 public class FriendlistAdapter extends BaseAdapter {
     private LayoutInflater mInflater;

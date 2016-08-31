@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 
+import android.widget.Toast;
+
 import com.king.luhai.adapter.FriendGridViewAdapter;
 
 import com.king.luhai.adapter.FriendlistAdapter;
