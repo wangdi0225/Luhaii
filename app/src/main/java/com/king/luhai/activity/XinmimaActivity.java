@@ -5,13 +5,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.king.luhai.R;
@@ -30,66 +28,65 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by Administrator on 2016/8/23.
+ * Created by Administrator on 2016/8/31.
  */
-public class SigninActivity extends Activity {
+public class XinmimaActivity extends Activity{
     private ImageButton imageButton;
-    private EditText editText;
-    private Button button;
-    private TextView textView;
-    private String str1;
-    private String phoneNums;
-
+    private EditText editTextmm1,editTextmm2;
+    private Button buttonxyb;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tianxieshoujihao);
-        dote();
+        setContentView(R.layout.xinmima);
+        date();
     }
-
-    private void dote() {
-        imageButton = (ImageButton) findViewById(R.id.tianxieshoujihao_fanhui);
-        editText = (EditText) findViewById(R.id.tianxieshoujihao_shouji);
-        button = (Button) findViewById(R.id.tianxieshoujihao_xiayibu);
-        textView = (TextView) findViewById(R.id.tianxieshoujihao_tongyi);
+    String a;
+    String c;
+    public void date(){
+        imageButton= (ImageButton) findViewById(R.id.xinmima_fanhui);
+        editTextmm1= (EditText) findViewById(R.id.xinmima_mima);
+        editTextmm2= (EditText) findViewById(R.id.xinmima_mima2);
+        buttonxyb= (Button) findViewById(R.id.xinmima_xiayibu);
         imageButton.setOnClickListener(onClickListener);
-        button.setOnClickListener(onClickListener);
-        textView.setOnClickListener(onClickListener);
-        phoneNums = editText.getText().toString();
+        buttonxyb.setOnClickListener(onClickListener);
+        a=editTextmm1.getText().toString();
+        c=editTextmm2.getText().toString();
     }
-
-    View.OnClickListener onClickListener = new View.OnClickListener() {
+    View.OnClickListener onClickListener=new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Intent intent = new Intent();
-            switch (view.getId()) {
-                case R.id.tianxieshoujihao_fanhui:
-                    intent.setClass(SigninActivity.this, LoginActivity.class);
+            Intent intent=new Intent();
+            switch (view.getId()){
+                case R.id.xinmima_fanhui:
+                    intent.setClass(XinmimaActivity.this,WangjimimaActivity.class);
                     startActivity(intent);
-                    break;
-                case R.id.tianxieshoujihao_xiayibu:
+                break;
+                case R.id.xinmima_xiayibu:
+                    login();
 
-                        login();
-
-                    break;
-                case R.id.tianxieshoujihao_tongyi:
-                    Toast.makeText(SigninActivity.this, "同意", Toast.LENGTH_SHORT).show();
-                    break;
-                default:
                     break;
             }
         }
     };
     String str;
+    String name;
     public void login() {
         new Thread(new Runnable() {
             @Override
             public void run() {
                 StringBuilder builder = new StringBuilder();
                 try {
-                    String httpHost = "http://192.168.1.191/home/shouye/zhuce/numb";
-                    String name =editText.getText().toString();
-                    String urlName = httpHost + "/" + name;
+                    String httpHost = "http://192.168.1.191/home/shouye/savapass/numb";
+                    Intent i = getIntent();
+                    Bundle b = new Bundle();
+                    b = i.getBundleExtra("data1");
+                    String shouji=b.getString("shoujihao1");
+                    if(a.equals(c)){
+                         name =editTextmm2.getText().toString();
+                    }else {
+                        Toast.makeText(XinmimaActivity.this,"两次密码不一致",Toast.LENGTH_SHORT).show();
+                    }
+                    String urlName = httpHost + "/"+ shouji+"/pass/"+ name;
                     URL url = new URL(urlName);
                     HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                     connection.setConnectTimeout(5000);
@@ -140,17 +137,13 @@ public class SigninActivity extends Activity {
                 message = jsonObject.getString("message");
                 Log.i("message", "" + message);
                 if(status==200) {
-                    Toast.makeText(SigninActivity.this,message, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(XinmimaActivity.this,message, Toast.LENGTH_SHORT).show();
                     Intent intent=new Intent();
-                    intent.setClass(SigninActivity.this, VerifyActivity.class);
-                    Bundle bundle1 = new Bundle();
-                    str1 = editText.getText().toString();
-                    bundle1.putString("shoujihao", str1);
-                    intent.putExtra("data", bundle1);
+                    intent.setClass(XinmimaActivity.this, LoginActivity.class);
                     startActivity(intent);
                     finish();
                 }else if(status==400){
-                    Toast.makeText(SigninActivity.this,message,Toast.LENGTH_SHORT).show();
+                    Toast.makeText(XinmimaActivity.this,message,Toast.LENGTH_SHORT).show();
                 }
             } catch (JSONException e) {
                 // TODO 自动生成的 catch 块
@@ -158,33 +151,4 @@ public class SigninActivity extends Activity {
             }
         }
     };
-    private boolean judgePhoneNums(String phoneNums) {
-        if (isMatchLength(phoneNums, 11)
-                && isMobileNO(phoneNums)) {
-            return true;
-        }
-        Toast.makeText(this, "手机号码输入有误！", Toast.LENGTH_SHORT).show();
-        return false;
-    }
-
-    public static boolean isMatchLength(String str, int length) {
-        if (str.isEmpty()) {
-            return false;
-        } else {
-            return str.length() == length ? true : false;
-        }
-    }
-
-    public static boolean isMobileNO(String mobileNums) {
-        /*
-         * 移动：134、135、136、137、138、139、150、151、157(TD)、158、159、187、188
-         * 联通：130、131、132、152、155、156、185、186 电信：133、153、180、189、（1349卫通）
-         * 总结起来就是第一位必定为1，第二位必定为3或5或8，其他位置的可以为0-9
-         */
-        String telRegex = "[1][358]\\d{9}";// "[1]"代表第1位为数字1，"[358]"代表第二位可以为3、5、8中的一个，"\\d{9}"代表后面是可以是0～9的数字，有9位。
-        if (TextUtils.isEmpty(mobileNums))
-            return false;
-        else
-            return mobileNums.matches(telRegex);
-    }
 }
