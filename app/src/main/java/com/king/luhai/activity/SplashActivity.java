@@ -46,7 +46,8 @@ public class SplashActivity extends Activity {
 				goHome();
 				break;
 			case GO_GUIDE:
-				goGuide();
+				goHome();
+				//goGuide();
 				break;
 			}
 			super.handleMessage(msg);
