@@ -33,7 +33,6 @@ public class WoDeTieZiActivity extends Activity {
                     Intent intent=new Intent();
                     intent.setClass(WoDeTieZiActivity.this,JiaRuTieZiActivity.class);
                     startActivity(intent);
-
                     break;
 
                 case R.id.yifaguo_tiezi:

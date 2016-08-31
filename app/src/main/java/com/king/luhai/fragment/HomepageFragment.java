@@ -68,16 +68,11 @@ public class HomepageFragment extends Fragment {
     private String[] zhudui = {"2", "3"};
     private String[] pinglun = {"2", "4"};
     private String[] dianzhan = {"13", "99+"};
-    private String[] dianxqu = {"艾欧尼亚", "祖安", "洛克萨斯", "班德尔城", "皮尔特洛夫", "战争学院", "巨神峰", "雷瑟守备", "裁决之地", "黑色玫瑰", "暗影岛", "钢铁烈阳", "均衡教派", "水晶之痕"};
-    private String[] wangtongqu = {"比尔吉沃特", "德玛西亚", "弗雷尔卓德", "无畏先锋"};
     private int[] listicon = {R.mipmap.lovepig, R.mipmap.te11};
     private int[] image = {0, R.mipmap.mao};
     private ArrayList<Fragment> fragmentlist;
     private String[] titleone = {"撸友新动态", "官方新动态", "精彩视频集锦", "转转赢积分"};
     private String[] titletwo = {"不错过每分信息", "时刻了解最新咨询", "各种精彩搞笑合辑", "积分翻倍好机会"};
-    private String[] regoinlist = {"全部", "电信", "网通", "其他"};
-    private int[] to = {R.id.name};
-    private String[] from = {"name"};
     private int[] icon = {R.mipmap.luoli, R.mipmap.wuya, R.mipmap.amumu, R.mipmap.wuya};
     private ImageView[] imageViews = null;
     private ImageView imageView = null;
@@ -97,6 +92,7 @@ public class HomepageFragment extends Fragment {
         homepageAdapter = new HomepageAdapter(getActivity().getSupportFragmentManager(), fragmentlist);
         viewPager = (ViewPager) header.findViewById(R.id.team_viewpager);
         viewPager.setAdapter(homepageAdapter);
+        viewPager.setOffscreenPageLimit(3);
         gridview = (GridView) header.findViewById(R.id.homepage_gridview);
         listView = (ListView) v.findViewById(R.id.homepage_listview);
         listView.addHeaderView(header);
@@ -112,8 +108,6 @@ public class HomepageFragment extends Fragment {
 
     private void adddate() {
         fragmentlist = new ArrayList<Fragment>();
-
-        
         Teampageone teampageone = new Teampageone();
         fragmentlist.add(teampageone);
         Teampagetwo teampagetwo = new Teampagetwo();
@@ -328,8 +322,6 @@ public class HomepageFragment extends Fragment {
             listviewlist.dianzhan = dianzhan[i];
             listviewlist.pinglun = pinglun[i];
             listviewlist.image = image[i];
-
-
             listlists.add(listviewlist);
         }
 
