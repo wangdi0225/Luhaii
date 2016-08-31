@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="这是撸友界面"
-        />
+        android:layout_height="57dp"
+        android:text="@string/dongtai"
+        android:textColor="@color/haoyoucolor"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="@color/black"/>
+    <ListView
+        android:id="@+id/dongtai_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+
+
 
 </LinearLayout>
