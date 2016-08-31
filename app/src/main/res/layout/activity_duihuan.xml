@@ -15,7 +15,7 @@
         >
 
         <ImageView
-            android:id="@+id/image_timo"
+            android:id="@+id/image_timos"
             android:layout_width="100dp"
             android:layout_height="155dp"
             android:src="@mipmap/timod"
@@ -29,12 +29,11 @@
             android:textSize="10sp"
             android:textColor="#ffffff"
             android:gravity="center"
-            android:layout_alignBottom="@id/image_timo"
+            android:layout_alignBottom="@id/image_timos"
             android:background="@drawable/dibukuang"
             android:layout_marginLeft="3dp"
             android:alpha="0.6"
             />
-
 
     </RelativeLayout>
 
