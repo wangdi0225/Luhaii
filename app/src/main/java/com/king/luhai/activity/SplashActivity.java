@@ -5,10 +5,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Message;
 
 import com.king.luhai.R;
-import com.king.luhai.product.Guide;
 
 /**
  * 
@@ -78,7 +76,7 @@ public class SplashActivity extends Activity {
 		finish();
 	}
 	private void goGuide(){
-		Intent i = new Intent(SplashActivity.this,YingdaoyeActivity	.class);
+		Intent i = new Intent(SplashActivity.this,GuideActivity	.class);
 		startActivity(i);
 		finish();
 	}
