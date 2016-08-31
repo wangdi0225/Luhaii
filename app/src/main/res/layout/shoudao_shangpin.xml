@@ -13,7 +13,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/back"
+            android:src="@mipmap/back_bai"
             android:layout_centerVertical="true"
             android:layout_margin="10dp"
             />
@@ -43,6 +43,7 @@
         android:layout_height="wrap_content"
         android:numColumns="3"
         android:horizontalSpacing="0dp"
+        android:background="#f3f4f5"
         android:verticalSpacing="10dp"
         >
 

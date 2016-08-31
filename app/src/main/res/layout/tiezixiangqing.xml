@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#f3f4f5">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#000000"
+
+        >
+
+        <ImageView
+            android:id="@+id/xiangqing_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/back_bai"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="详情"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/tiezixiangqing_list"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:layout_marginTop="10dp"
+        >
+
+    </ListView>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/xiangqing_dibu"
+        android:layout_margin="10dp">
+
+        <EditText
+            android:id="@+id/xiangqing_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="我也说一句......"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:textSize="18sp"
+            android:background="@null"
+
+            />
+
+        <ImageView
+            android:id="@+id/xiangqing_xiaolian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/happyface"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:paddingRight="10dp"
+            />
+
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>

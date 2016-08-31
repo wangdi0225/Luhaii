@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#000000"
+
+        >
+
+            <TextView
+                android:id="@+id/users_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/huangback"
+                android:drawablePadding="8dp"
+                android:text="消息"
+                android:textSize="15sp"
+                android:textColor="#ffffff"
+                android:layout_margin="10dp"
+                android:layout_centerVertical="true"
+                />
+
+        <TextView
+            android:id="@+id/users_liaotian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="赵日天"
+            android:textColor="#ffffff"
+            android:textSize="19sp"
+            />
+
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/users_listView"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+
+        ></ListView>
+
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:background="#343434"
+        android:layout_weight="1"
+
+        >
+
+        <ImageView
+            android:id="@+id/users_shuohua"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="2"
+            android:src="@mipmap/huatong"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            />
+
+        <EditText
+            android:id="@+id/users_edit"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="10"
+            android:src="@mipmap/dibuduihuakuang"
+            android:background="#ffffff"
+            android:layout_margin="10dp"
+            />
+
+
+        <ImageView
+            android:id="@+id/users_biaoqing"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:src="@mipmap/happyface2"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            />
+
+        <ImageView
+            android:id="@+id/users_tianjia"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:src="@mipmap/add2"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>

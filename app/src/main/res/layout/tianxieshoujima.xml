@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#f3f4f6">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/back_bai"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:id="@+id/tianyanma_back"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="填写手机验证码"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="请先输入验证码再继续操作"
+            android:layout_marginTop="11dp"
+            android:layout_marginLeft="12dp"
+            android:textColor="#888888"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="3dp"
+            android:src="@mipmap/yanzhengma"
+            android:id="@+id/yanzhengma"
+            />
+
+
+
+        <EditText
+            android:id="@+id/yanzheng_shuru"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="请输入验证码"
+            android:layout_marginTop="5dp"
+            android:padding="12sp"
+            android:textSize="18sp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+
+        >
+
+        <TextView
+            android:id="@+id/yanzheng_tijiao"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tijiaokuang"
+            android:layout_margin="10dp"
+            android:text="提交"
+            android:padding="15dp"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            />
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

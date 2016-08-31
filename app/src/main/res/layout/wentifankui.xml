@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+
+        >
+
+        <ImageView
+            android:id="@+id/wentifankui_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/back_bai"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="问题反馈"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        >
+
+        <EditText
+            android:id="@+id/wentifankui"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="说点儿什么吧......"
+            android:background="@null"
+            android:layout_margin="10dp"
+            android:textColor="#a9a9a9"
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            >
+
+        <TextView
+            android:id="@+id/wenti_weizhi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/dingwei"
+            android:layout_margin="10dp"
+            android:drawablePadding="5dp"
+            android:text="显示位置"
+            android:textSize="18sp"
+            android:gravity="center"
+            />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/wenti_gongkai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/globe"
+                android:drawablePadding="5dp"
+                android:text="公开"
+                android:layout_margin="10dp"
+                android:textSize="18sp"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

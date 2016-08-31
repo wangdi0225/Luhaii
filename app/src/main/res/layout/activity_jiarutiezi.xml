@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#b4eeb4">
+    android:background="#f3f4f5">
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -65,7 +65,7 @@
                     android:id="@+id/tiezi_xiaoxi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:drawableLeft="@mipmap/xiaoxi"
+                    android:drawableLeft="@mipmap/xiaoxi2"
                     android:text="0"
                     android:drawablePadding="5dp"
                     android:layout_margin="10dp"
