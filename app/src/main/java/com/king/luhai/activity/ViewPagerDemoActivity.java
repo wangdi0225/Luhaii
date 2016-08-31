@@ -12,8 +12,9 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.king.luhai.R;
 import com.king.luhai.adapter.ViewPagerAdapter;
+import com.king.luhai.R;
+
 
 public class ViewPagerDemoActivity extends Activity implements OnClickListener, OnPageChangeListener {
 

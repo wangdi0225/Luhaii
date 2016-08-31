@@ -34,7 +34,7 @@ public class SplashActivity extends Activity {
 
 	private Handler mHandler = new Handler(){
 		public void handleMessage(android.os.Message msg) {
-			switch (msg.what) {
+			switch (msg.what){
 				case GO_HOME:
 					goHome();
 					//goGuide();
@@ -43,6 +43,8 @@ public class SplashActivity extends Activity {
 					goGuide();
 					//goHome();
 					break;
+
+
 			}
 
 		};

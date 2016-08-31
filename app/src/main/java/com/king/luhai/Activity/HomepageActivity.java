@@ -1,5 +1,4 @@
 package com.king.luhai.activity;
-
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,18 +7,18 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import com.king.luhai.R;
 import com.king.luhai.adapter.HomepageAdapter;
+import com.king.luhai.R;
 import com.king.luhai.fragment.FriendFragment;
 import com.king.luhai.fragment.HomepageFragment;
 import com.king.luhai.fragment.MessageFragment;
 import com.king.luhai.fragment.MyFragment;
-
 import java.util.ArrayList;
 
 /**
  * Created by Administrator on 2016/8/22.
  */
+
 public class HomepageActivity extends FragmentActivity {
     RadioButton shouye, xiaoxi, wode, pengyou;
     ArrayList<Fragment> fragmentlist;
@@ -41,6 +40,7 @@ public class HomepageActivity extends FragmentActivity {
         viewPager.setAdapter(homepageAdapter);
         radiogroup = (RadioGroup) findViewById(R.id.homepage_radiogroup);
         viewPager.setOnPageChangeListener(onPageChangeListener);
+        viewPager.setOffscreenPageLimit(4);
         radiogroup.setOnCheckedChangeListener(onCheckedChangeListener);
 
     }
