@@ -9,10 +9,9 @@ import android.widget.AbsListView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
-import com.king.luhai.Product.SysUtils;
+import com.king.luhai.product.SysUtils;
 import com.king.luhai.R;
 
-import net.tsz.afinal.FinalBitmap;
 
 import java.util.ArrayList;
 

@@ -5,11 +5,11 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
+
 import android.widget.Toast;
 import com.king.luhai.adapter.FriendGridViewAdapter;
+
 import com.king.luhai.adapter.FriendlistAdapter;
 import com.king.luhai.product.Friendlist;
 import com.king.luhai.R;

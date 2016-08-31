@@ -1,25 +1,19 @@
 package com.king.luhai.adapter;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.content.Context;
 import android.text.util.Linkify;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.BaseAdapter;
-import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.king.luhai.R;
 import com.king.luhai.product.Friendlist;
+import com.king.luhai.product.MyGridView;
 import com.king.luhai.product.SysUtils;
-
-
+import com.king.luhai.R;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,7 +24,7 @@ public class FriendlistAdapter extends BaseAdapter {
     private LayoutInflater mInflater;
     private Activity context;
     private List<Friendlist> list;
-    private FinalBitmap finalImageLoader ;
+    private FinalBitmap finalImageLoader;
     private FriendGridViewAdapter nearByInfoImgsAdapter;
     private int wh;
 
@@ -38,9 +32,9 @@ public class FriendlistAdapter extends BaseAdapter {
         super();
         this.mInflater = LayoutInflater.from(context);
         this.context = context;
-        this.wh=(SysUtils.getScreenWidth(context)-SysUtils.Dp2Px(context, 99))/3;
+        this.wh = (SysUtils.getScreenWidth(context) - SysUtils.Dp2Px(context, 99)) / 3;
         this.list = list;
-        this.finalImageLoader=FinalBitmap.create(context);
+        this.finalImageLoader = FinalBitmap.create(context);
         this.finalImageLoader.configLoadingImage(R.mipmap.ic_launcher);
     }
 
@@ -76,13 +70,13 @@ public class FriendlistAdapter extends BaseAdapter {
             convertView = mInflater.inflate(R.layout.item_dongtailist, null);
             holder = new ViewHolder();
             holder.headphoto = (ImageView) convertView.findViewById(R.id.title);//头像
-            holder.dianzhan=(TextView)convertView.findViewById(R.id.dianzhan);//点赞
-            holder.pinglun=(TextView)convertView.findViewById(R.id.pinglun);//评论
-            holder.zhuanfa=(TextView)convertView.findViewById(R.id.zhuanfa);//转发
+            holder.dianzhan = (TextView) convertView.findViewById(R.id.dianzhan);//点赞
+            holder.pinglun = (TextView) convertView.findViewById(R.id.pinglun);//评论
+            holder.zhuanfa = (TextView) convertView.findViewById(R.id.zhuanfa);//转发
             holder.disName = (TextView) convertView.findViewById(R.id.name);//昵称
             holder.time = (TextView) convertView.findViewById(R.id.time);//时间
             holder.content = (TextView) convertView.findViewById(R.id.content);//发布内容
-            holder.rl4=(RelativeLayout) convertView.findViewById(R.id.rl4);//图片布局
+            holder.rl4 = (RelativeLayout) convertView.findViewById(R.id.rl4);//图片布局
             holder.gv_images = (MyGridView) convertView.findViewById(R.id.gv_images);//图片
             convertView.setTag(holder);
         } else {
@@ -90,27 +84,26 @@ public class FriendlistAdapter extends BaseAdapter {
         }
         final Friendlist bean = list.get(position);
 
-        String name = null,time = null, content = null,  contentimage = null;
-        int headpath =0;
+        String name = null, time = null, content = null, contentimage = null;
+        int headpath = 0;
 
         holder.dianzhan.setOnClickListener(new View.OnClickListener() {
-            boolean ischeck=true;
+            boolean ischeck = true;
+
             @Override
             public void onClick(View view) {
-                if (ischeck){
-                holder.dianzhan.setText("2");
-                holder.dianzhan.setBackgroundResource(R.color.tubiaose1);
-                    ischeck=false;
-                }else{
+                if (ischeck) {
+                    holder.dianzhan.setText("2");
+                    holder.dianzhan.setBackgroundResource(R.color.tubiaose1);
+                    ischeck = false;
+                } else {
                     holder.dianzhan.setText("1");
                     holder.dianzhan.setBackgroundResource(R.color.white);
-                    ischeck=true;
+                    ischeck = true;
 
                 }
             }
         });
-
-
 
 
         if (bean != null) {
@@ -121,28 +114,28 @@ public class FriendlistAdapter extends BaseAdapter {
             contentimage = bean.getImages();
         }
         //昵称
-        if (name!=null&&!name.equals("")) {
+        if (name != null && !name.equals("")) {
             holder.disName.setText(name);
         }
         //是否含有图片
-        if (contentimage!=null&&!contentimage.equals("")) {
+        if (contentimage != null && !contentimage.equals("")) {
             holder.rl4.setVisibility(View.VISIBLE);
-            initInfoImages(holder.gv_images,contentimage);
+            initInfoImages(holder.gv_images, contentimage);
         } else {
             holder.rl4.setVisibility(View.GONE);
         }
         //发布时间
-        if (time!=null&&!time.equals("")) {
+        if (time != null && !time.equals("")) {
             holder.time.setText(time);
         }
         //内容
-        if (content!=null&&!content.equals("")) {
+        if (content != null && !content.equals("")) {
             holder.content.setText(content);
             Linkify.addLinks(holder.content, Linkify.WEB_URLS);
         }
         //头像
-        if (headpath!=0) {
-           holder.headphoto.setImageResource(headpath);
+        if (headpath != 0) {
+            holder.headphoto.setImageResource(headpath);
         } else {
             holder.headphoto.setImageResource(R.mipmap.ic_launcher);
         }
@@ -169,41 +162,40 @@ public class FriendlistAdapter extends BaseAdapter {
     }
 
 
-
-
     /**
      * 加载信息中包含的图片内容
+     *
      * @param imgspath
      */
 
-    public void initInfoImages(MyGridView gv_images,final String imgspath){
-        if(imgspath!=null&&!imgspath.equals("")){
-            String[] imgs=imgspath.split("#");
-            ArrayList<String> list=new ArrayList<String>();
-            for(int i=0;i<imgs.length;i++){
+    public void initInfoImages(MyGridView gv_images, final String imgspath) {
+        if (imgspath != null && !imgspath.equals("")) {
+            String[] imgs = imgspath.split("#");
+            ArrayList<String> list = new ArrayList<String>();
+            for (int i = 0; i < imgs.length; i++) {
                 list.add(imgs[i]);
             }
-            int w=0;
+            int w = 0;
             switch (imgs.length) {
                 case 1:
-                    w=wh;
+                    w = wh;
                     gv_images.setNumColumns(1);
                     break;
                 case 2:
                 case 4:
-                    w=2*wh+SysUtils.Dp2Px(context, 2);
+                    w = 2 * wh + SysUtils.Dp2Px(context, 2);
                     gv_images.setNumColumns(2);
                     break;
                 case 3:
                 case 5:
                 case 6:
-                    w=wh*3+SysUtils.Dp2Px(context, 2)*2;
+                    w = wh * 3 + SysUtils.Dp2Px(context, 2) * 2;
                     gv_images.setNumColumns(3);
                     break;
             }
             RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(w, RelativeLayout.LayoutParams.WRAP_CONTENT);
             gv_images.setLayoutParams(lp);
-            nearByInfoImgsAdapter=new FriendGridViewAdapter(context, list);
+            nearByInfoImgsAdapter = new FriendGridViewAdapter(context, list);
             gv_images.setAdapter(nearByInfoImgsAdapter);
 
         }

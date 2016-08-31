@@ -2,19 +2,14 @@ package com.king.luhai.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.graphics.Color;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.king.luhai.Product.GridviewList;
-import com.king.luhai.Product.RegoinList;
+import com.king.luhai.product.RegoinList;
 import com.king.luhai.R;
-
 
 import java.util.List;
 

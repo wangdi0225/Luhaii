@@ -9,7 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.king.luhai.Product.HomepageListview;
+import com.king.luhai.product.HomepageListview;
 import com.king.luhai.R;
 
 import java.util.List;
