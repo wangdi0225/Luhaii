@@ -1,4 +1,4 @@
-package com.king.luhai.Adapter;
+package com.king.luhai.adapter;
 
 import android.app.Activity;
 import android.graphics.Bitmap;

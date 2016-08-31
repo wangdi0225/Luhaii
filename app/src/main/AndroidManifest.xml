@@ -31,7 +31,6 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
         <activity android:name=".activity.YingdaoyeActivity"/>
         <activity android:name=".product.Guide"/>
         <activity android:name=".activity.LoginActivity"/>
@@ -42,12 +41,9 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:windowSoftInputMode="stateHidden|adjustResize"/>
         <activity android:name=".activity.QQzhucheActivity"/>
-
-    </application>
         <activity android:name=".activity.ZHGuanLi"/>
         <activity android:name=".activity.HomepageActivity"/>
         <activity android:name=".activity.ViewPagerDemoActivity"/>
-
         <activity android:name=".activity.SigninActivity"/>
         <activity android:name=".activity.VerifyActivity"/>
         <activity android:name=".activity.QQzhucheActivity"/>

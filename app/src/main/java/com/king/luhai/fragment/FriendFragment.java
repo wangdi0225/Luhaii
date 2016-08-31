@@ -1,4 +1,4 @@
-package com.king.luhai.Fragment;
+package com.king.luhai.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,10 +9,9 @@ import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
-
-import com.king.luhai.Adapter.FriendGridViewAdapter;
-import com.king.luhai.Adapter.FriendlistAdapter;
-import com.king.luhai.Product.Friendlist;
+import com.king.luhai.adapter.FriendGridViewAdapter;
+import com.king.luhai.adapter.FriendlistAdapter;
+import com.king.luhai.product.Friendlist;
 import com.king.luhai.R;
 
 import java.util.ArrayList;

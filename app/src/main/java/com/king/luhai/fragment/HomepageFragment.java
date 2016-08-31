@@ -1,4 +1,4 @@
-package com.king.luhai.Fragment;
+package com.king.luhai.fragment;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -16,32 +16,19 @@ import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListView;
-<<<<<<< HEAD
-
 import com.king.luhai.adapter.HomepageAdapter;
 import com.king.luhai.adapter.HomepageGridviewAdapter;
 import com.king.luhai.adapter.HomepageListViewAdapter;
+import com.king.luhai.adapter.RegoinAdapter;
 import com.king.luhai.product.GridviewList;
 import com.king.luhai.product.HomepageListview;
-=======
 import android.widget.SimpleAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
-import com.king.luhai.Adapter.HomepageAdapter;
-import com.king.luhai.Adapter.HomepageGridviewAdapter;
-import com.king.luhai.Adapter.HomepageListViewAdapter;
-import com.king.luhai.Adapter.RegoinAdapter;
-import com.king.luhai.Fragment.Teampageone;
-import com.king.luhai.Fragment.Teampagethree;
-import com.king.luhai.Fragment.Teampagetwo;
-import com.king.luhai.Product.GridviewList;
-import com.king.luhai.Product.HomepageListview;
-import com.king.luhai.Product.GridviewList;
-import com.king.luhai.Product.HomepageListview;
-import com.king.luhai.Product.RegoinList;
->>>>>>> 70339040c3fb39bdff85e832c3ba5f2432bff6ca
+-
+
 import com.king.luhai.R;
+import com.king.luhai.product.RegoinList;
 
 import java.util.AbstractList;
 import java.util.ArrayList;
