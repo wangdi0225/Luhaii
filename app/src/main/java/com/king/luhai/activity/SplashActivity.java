@@ -37,11 +37,11 @@ public class SplashActivity extends Activity {
 			switch (msg.what) {
 				case GO_HOME:
 					goHome();
-				//goGuide();
+					//goGuide();
 					break;
 				case GO_GUIDE:
-					//goGuide();
-					goHome();
+					goGuide();
+					//goHome();
 					break;
 			}
 
@@ -76,7 +76,7 @@ public class SplashActivity extends Activity {
 		finish();
 	}
 	private void goGuide(){
-		Intent i = new Intent(SplashActivity.this,YingdaoyeActivity.class);
+		Intent i = new Intent(SplashActivity.this,YingdaoyeActivity	.class);
 		startActivity(i);
 		finish();
 	}

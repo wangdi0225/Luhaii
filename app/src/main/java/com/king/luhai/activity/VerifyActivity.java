@@ -82,6 +82,7 @@ public class VerifyActivity extends Activity {
         textViewsj.setText(b.getString("shoujihao"));
         SMSSDK.initSDK(this, APPKEY, APPSECRET);
         SMSSDK.registerEventHandler(eventHandler);
+
     }
 
     View.OnClickListener onClickListener = new View.OnClickListener() {
@@ -90,7 +91,6 @@ public class VerifyActivity extends Activity {
             Intent intent = new Intent();
             String phoneNums = textViewsj.getText().toString();
             switch (view.getId()) {
-
                 case R.id.tianxieyanzhengma_fanhui:
                     intent.setClass(VerifyActivity.this, SigninActivity.class);
                     startActivity(intent);
@@ -98,13 +98,6 @@ public class VerifyActivity extends Activity {
                 case R.id.tianxieyanzhengma_xiayibu:
                     SMSSDK.submitVerificationCode("86", phoneNums, editText.getText().toString());
                     createProgressBar();
-                    login();
-                    if(status==200){
-                        Toast.makeText(VerifyActivity.this,message, Toast.LENGTH_SHORT).show();
-                        intent.setClass(VerifyActivity.this,LoginActivity.class);
-                        startActivity(intent);
-                    }
-
                     break;
                 case R.id.tianxieyanzhengma_chongxinfasong:
                     textViewsj.setVisibility(View.VISIBLE);
@@ -189,8 +182,9 @@ public class VerifyActivity extends Activity {
                     if (event == SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE) {// 提交验证码成功
                         Toast.makeText(getApplicationContext(), "验证成功",
                                 Toast.LENGTH_SHORT).show();//消息提示
+                        login();
                         Intent intent = new Intent(VerifyActivity.this,
-                                LoginActivity.class);//跳转activity
+                                LoginActivity.class)    ;//跳转activity
                         intent.putExtra("phone", textViewsj.getText().toString());//将phone值放进phone里以便传送至下一个activity中
                         startActivity(intent);
                         finish();//设置无法返回本界面
@@ -279,7 +273,7 @@ public class VerifyActivity extends Activity {
             public void run() {
                 StringBuilder builder = new StringBuilder();
                 try {
-                    String httpHost = "http://192.168.1.191/home/shouye/zhuce/numb";
+                    String httpHost = "http://192.168.1.191/home/shouye/create/numb";
                     String name =textViewsj.getText().toString();
                     String urlName = httpHost + "/" + name;
                     URL url = new URL(urlName);
@@ -309,7 +303,7 @@ public class VerifyActivity extends Activity {
                     inputStream.close();
                     Log.i("builder-----", builder.toString());
                     str = builder.toString();
-                    read();
+                    myHandler.sendEmptyMessage(0);
                 } catch (MalformedURLException e) {
                     // TODO 自动生成的 catch 块
                     e.printStackTrace();
@@ -322,17 +316,28 @@ public class VerifyActivity extends Activity {
     }
     int status;
     String message;
-    private void read() {
-        try {
-            JSONObject jsonObject = new JSONObject(str);
-            Bundle bundle = new Bundle();
-            status = jsonObject.getInt("code");
-            Log.i("code", "" + status);
-            message = jsonObject.getString("message");
-            Log.i("message", "" + message);
-        } catch (JSONException e) {
-            // TODO 自动生成的 catch 块
-            e.printStackTrace();
+    Handler myHandler = new Handler() {
+        public void handleMessage(Message msg) {
+            try {
+                JSONObject jsonObject = new JSONObject(str);
+                Bundle bundle = new Bundle();
+                status = jsonObject.getInt("code");
+                Log.i("code", "" + status);
+                message = jsonObject.getString("message");
+                Log.i("message", "" + message);
+                if (status == 200) {
+                    Toast.makeText(VerifyActivity.this, message, Toast.LENGTH_SHORT).show();
+                    Intent intent=new Intent();
+                    intent.setClass(VerifyActivity.this,LoginActivity.class);
+                    startActivity(intent);
+                    finish();
+                } else if (status == 400) {
+                    Toast.makeText(VerifyActivity.this, message, Toast.LENGTH_SHORT).show();
+                }
+            } catch (JSONException e) {
+                // TODO 自动生成的 catch 块
+                e.printStackTrace();
+            }
         }
-    }
+    };
 }
