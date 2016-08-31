@@ -16,7 +16,7 @@
             android:id="@+id/faguo_tieziback"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/back"
+            android:src="@mipmap/back_bai"
             android:layout_margin="10dp"
             android:layout_centerVertical="true"
             />
@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:dividerHeight="10dp"
-        android:divider="#f0fff0">
+        android:divider="#f3f4f5">
 
     </ListView>
 
