@@ -18,11 +18,7 @@
             android:id="@+id/image_timo"
             android:layout_width="100dp"
             android:layout_height="155dp"
-<<<<<<< HEAD
             android:src="@mipmap/timo1"
-=======
-            android:src="@mipmap/timod"
->>>>>>> 70339040c3fb39bdff85e832c3ba5f2432bff6ca
             />
 
         <TextView
