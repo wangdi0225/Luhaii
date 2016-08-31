@@ -9,8 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.king.luhai.Fragment.HaoyouFragment;
-import com.king.luhai.Fragment.XiaoxiFragment;
+import com.king.luhai.fragment.HaoyouFragment;
+import com.king.luhai.fragment.XiaoxiFragment;
 import com.king.luhai.R;
 
 /**

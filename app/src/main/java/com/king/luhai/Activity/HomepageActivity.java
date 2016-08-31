@@ -9,7 +9,7 @@ import android.support.v4.view.ViewPager;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import com.king.luhai.Adapter.HomepageAdapter;
+import com.king.luhai.adapter.HomepageAdapter;
 import com.king.luhai.R;
 
 import java.util.ArrayList;

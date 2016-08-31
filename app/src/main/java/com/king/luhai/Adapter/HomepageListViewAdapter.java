@@ -1,8 +1,7 @@
-package com.king.luhai.Adapter;
+package com.king.luhai.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.king.luhai.Product.HomepageListview;
+import com.king.luhai.product.HomepageListview;
 import com.king.luhai.R;
 
 import java.util.List;
