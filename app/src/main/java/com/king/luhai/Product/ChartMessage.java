@@ -1,4 +1,4 @@
-package com.king.luhai.product;
+package com.king.luhai.Product;
 
 /**
  * Created by Administrator on 2016-8-29.

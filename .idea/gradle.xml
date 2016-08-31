@@ -5,7 +5,8 @@
       <GradleProjectSettings>
         <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="F:\android-studio\gradle\gradle-2.10" />
+<<<<<<< HEAD
+        <option name="gradleHome" value="E:\andriodstudio\android-studio\gradle\gradle-2.10" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
@@ -13,6 +14,14 @@
             <option value="$PROJECT_DIR$/SMSSDKGUI-2.1.1" />
             <option value="$PROJECT_DIR$/afinal_0.5.1_bin" />
             <option value="$PROJECT_DIR$/app" />
+=======
+        <option name="gradleHome" value="F:\android-studio\gradle\gradle-2.10" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/universal-image-loader-1.9.2-SNAPSHOT-with-sources" />
+>>>>>>> hutingrui
           </set>
         </option>
         <option name="myModules">

@@ -1,4 +1,4 @@
-package com.king.luhai.adapter;
+package com.king.luhai.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Adapter;
 import android.widget.TextView;
 
-import com.king.luhai.product.ChartMessage;
+import com.king.luhai.Product.ChartMessage;
 import com.king.luhai.R;
 
 import java.util.List;
