@@ -65,12 +65,7 @@ public class FaGuoTieZiActivity extends Activity {
 
     }
 
-
-
-
-
-
-    public  List<Map<String,Object>> getData(){
+  public  List<Map<String,Object>> getData(){
         for (int i=0;i<10;i++){
             Map<String, Object> map = new HashMap<String, Object>();
             map.put("images", R.mipmap.meinv2);
