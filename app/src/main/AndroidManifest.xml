@@ -39,5 +39,4 @@
         <activity android:name=".product.Guide"/>
         <activity android:name=".activity.QQzhucheActivity"/>
     </application>
-
 </manifest>
