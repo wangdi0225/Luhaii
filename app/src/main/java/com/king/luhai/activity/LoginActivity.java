@@ -16,10 +16,7 @@ import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.king.luhai.R;
-import com.nostra13.universalimageloader.cache.disc.impl.TotalSizeLimitedDiscCache;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -47,7 +44,6 @@ public class LoginActivity extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
         dote();
-
     }
     private void dote(){
         imageButtontx= (ImageButton) findViewById(R.id.denglu_touxiang);
@@ -77,7 +73,10 @@ public class LoginActivity extends Activity{
                     Toast.makeText(LoginActivity.this,"头像",Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.denglu_denglu:
-                    login();
+                    intent.setClass(LoginActivity.this,HomepageActivity.class);
+                    startActivity(intent);
+                    finish();
+                   // login();
                   //  buttondl.performClick();
 
                     break;

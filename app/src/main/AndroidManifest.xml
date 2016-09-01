@@ -38,6 +38,10 @@
         <activity android:name=".activity.YingdaoyeActivity"/>
         <activity android:name=".product.Guide"/>
         <activity android:name=".activity.QQzhucheActivity"/>
+        <activity android:name=".activity.JiFenShangChengActivity"/>
+        <activity android:name=".activity.WoDeJiFenActivity"/>
+        <activity android:name=".activity.WoDeTieZiActivity"/>
+        <activity android:name=".activity.XiTongSheZheActivity"/>
     </application>
 
 </manifest>
