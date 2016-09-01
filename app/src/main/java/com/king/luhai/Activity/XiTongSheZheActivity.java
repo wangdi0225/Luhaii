@@ -29,6 +29,8 @@ public class XiTongSheZheActivity extends Activity {
         qinghuancun_textView=(TextView)findViewById(R.id.qinghuancun_textView);
         xitong_shezhi_back=(ImageView)findViewById(R.id.xitong_shezhi_back);
         xitong_shezhi_back.setOnClickListener(listener);
+        xitong_shezhi_back=(ImageView)findViewById(R.id.xitong_shezhi_back);
+        xitong_shezhi_back.setOnClickListener(listener);
         qinghuancun_textView.setOnClickListener(listener);
         guanlihao_imageView.setOnClickListener(listener);
         anquanhao_imageView.setOnClickListener(listener);
