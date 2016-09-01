@@ -29,7 +29,7 @@ public class ShangPinActivity extends Activity {
 
 
         String[] from = {"images","mingzi","jiage"};
-        int[] to = {R.id.image_timo,R.id.renwu,R.id.wujia};
+        int[] to = {R.id.image_timos,R.id.renwu,R.id.wujia};
 
         simpleAdapter = new SimpleAdapter(this, getLists(), R.layout.activity_shangping, from, to);
 

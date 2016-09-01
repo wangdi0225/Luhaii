@@ -108,7 +108,7 @@ public class LoginActivity extends Activity{
                         editor.putBoolean("checkboxBoolean", false);
                         editor.commit();
                     }
-                    login();
+
 
                   //  buttondl.performClick();
 
