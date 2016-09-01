@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/LuHai.iml" filepath="$PROJECT_DIR$/LuHai.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/LH.iml" filepath="$PROJECT_DIR$/LH.iml" />
+>>>>>>> 720b0f976c35efc04175fef0fa0d1252300b081f
       <module fileurl="file://$PROJECT_DIR$/SMSSDK-2.1.1/SMSSDK-2.1.1.iml" filepath="$PROJECT_DIR$/SMSSDK-2.1.1/SMSSDK-2.1.1.iml" />
       <module fileurl="file://$PROJECT_DIR$/SMSSDKGUI-2.1.1/SMSSDKGUI-2.1.1.iml" filepath="$PROJECT_DIR$/SMSSDKGUI-2.1.1/SMSSDKGUI-2.1.1.iml" />
       <module fileurl="file://$PROJECT_DIR$/afinal_0.5.1_bin/afinal_0.5.1_bin.iml" filepath="$PROJECT_DIR$/afinal_0.5.1_bin/afinal_0.5.1_bin.iml" />

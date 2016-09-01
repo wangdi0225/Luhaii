@@ -11,6 +11,7 @@ import com.king.luhai.adapter.HomepageAdapter;
 import com.king.luhai.R;
 import com.king.luhai.fragment.FriendFragment;
 import com.king.luhai.fragment.HomepageFragment;
+import com.king.luhai.fragment.HomepageFragmenttitle;
 import com.king.luhai.fragment.MessageFragment;
 import com.king.luhai.fragment.MyFragment;
 import java.util.ArrayList;
@@ -147,7 +148,7 @@ public class HomepageActivity extends FragmentActivity {
 
     public void getDate() {
         fragmentlist = new ArrayList<Fragment>();
-        HomepageFragment homepageFragment = new HomepageFragment();
+        HomepageFragmenttitle homepageFragment = new HomepageFragmenttitle();
         fragmentlist.add(homepageFragment);
         MessageFragment messageFragment = new MessageFragment();
         fragmentlist.add(messageFragment);

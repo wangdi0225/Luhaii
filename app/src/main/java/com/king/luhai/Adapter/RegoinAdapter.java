@@ -1,7 +1,9 @@
 package com.king.luhai.adapter;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +11,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 
+import com.king.luhai.activity.HomepageActivity;
 import com.king.luhai.product.GridviewList;
 import com.king.luhai.product.RegoinList;
 import com.king.luhai.R;
@@ -82,29 +85,26 @@ public class RegoinAdapter extends BaseAdapter {
         viewHolder.onetext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                for(int i= 0 ;i<myList.size();i++){
-                    myList.get(i).ischeck=false;
+                for (int i = 0; i < myList.size(); i++) {
+                    myList.get(i).ischeck = false;
                 }
-                myList.get(position).ischeck=true;
+                myList.get(position).ischeck = true;
                 notifyDataSetChanged();
             }
         });
         // 填充数据
 
 
-        if(myList.get(position).ischeck) {
+        if (myList.get(position).ischeck) {
             viewHolder.onetext.setBackgroundResource(R.color.huise);
-
-
-
-        }else {
+            Intent intent=new Intent();
+            intent.setClass(mContext, HomepageActivity.class);
+            mContext.startActivity(intent);
+            ((Activity)mContext).finish();
+        } else {
             viewHolder.onetext.setBackgroundResource(R.color.white);
         }
         viewHolder.onetext.setText(myList.get(position).name);
-
-
-
-
 
         return convertView;
     }

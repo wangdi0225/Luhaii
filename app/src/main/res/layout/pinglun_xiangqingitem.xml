@@ -21,15 +21,15 @@
             >
 
             <TextView
-
+                android:id="@+id/pinglunfa"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="转发"
                 android:layout_margin="10dp"
-
                 />
 
             <TextView
+                android:id="@+id/pinglun_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"

@@ -1,4 +1,4 @@
-package com.king.luhai.Product;
+package com.king.luhai.product;
 
 /**
  * Created by Administrator on 2016-8-29.
@@ -15,10 +15,10 @@ public class ChartMessage {
     }
 
     ;
-    super();
+   /* super();
     this.direction=direction;
     this.content=content;
-
+*/
 
     public void setDirection(int direction) {
         this.direction = direction;

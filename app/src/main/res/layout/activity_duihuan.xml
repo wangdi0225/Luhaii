@@ -15,14 +15,10 @@
         >
 
         <ImageView
-            android:id="@+id/image_timo"
+            android:id="@+id/image_timos"
             android:layout_width="100dp"
             android:layout_height="155dp"
-<<<<<<< HEAD
-            android:src="@mipmap/timo1"
-=======
-            android:src="@mipmap/timo2"
->>>>>>> hutingrui
+            android:src="@mipmap/timod"
             />
 
         <TextView
@@ -33,12 +29,11 @@
             android:textSize="10sp"
             android:textColor="#ffffff"
             android:gravity="center"
-            android:layout_alignBottom="@id/image_timo"
+            android:layout_alignBottom="@id/image_timos"
             android:background="@drawable/dibukuang"
             android:layout_marginLeft="3dp"
             android:alpha="0.6"
             />
-
 
     </RelativeLayout>
 
