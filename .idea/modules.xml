@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/LuHai.iml" filepath="$PROJECT_DIR$/LuHai.iml" />
       <module fileurl="file://$PROJECT_DIR$/SMSSDK-2.1.1/SMSSDK-2.1.1.iml" filepath="$PROJECT_DIR$/SMSSDK-2.1.1/SMSSDK-2.1.1.iml" />
       <module fileurl="file://$PROJECT_DIR$/SMSSDKGUI-2.1.1/SMSSDKGUI-2.1.1.iml" filepath="$PROJECT_DIR$/SMSSDKGUI-2.1.1/SMSSDKGUI-2.1.1.iml" />
       <module fileurl="file://$PROJECT_DIR$/afinal_0.5.1_bin/afinal_0.5.1_bin.iml" filepath="$PROJECT_DIR$/afinal_0.5.1_bin/afinal_0.5.1_bin.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/luhai.iml" filepath="$PROJECT_DIR$/luhai.iml" />
     </modules>
   </component>
 </project>
