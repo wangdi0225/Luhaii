@@ -39,5 +39,10 @@
         <activity android:name=".activity.QQzhucheActivity"/>
         <activity android:name=".activity.WangjimimaActivity"/>
         <activity android:name=".activity.XinmimaActivity"/>
+        <activity android:name=".activity.JiFenShangChengActivity"/>
+        <activity android:name=".activity.WoDeJiFenActivity"/>
+        <activity android:name=".activity.WoDeTieZiActivity"/>
+        <activity android:name=".activity.XiTongSheZheActivity"/>
+
     </application>
 </manifest>

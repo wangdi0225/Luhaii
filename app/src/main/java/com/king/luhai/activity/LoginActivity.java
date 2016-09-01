@@ -18,9 +18,7 @@ import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.king.luhai.R;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -50,7 +48,6 @@ public class LoginActivity extends Activity{
         setContentView(R.layout.login);
         sp = this.getSharedPreferences("userinfo", Context.MODE_PRIVATE);
         dote();
-
     }
     private void dote(){
         imageButtontx= (ImageButton) findViewById(R.id.denglu_touxiang);
@@ -87,6 +84,7 @@ public class LoginActivity extends Activity{
                     break;
                 case R.id.denglu_denglu:
 
+
                     login();
 
                     String name = editTextzh.getText().toString();
@@ -109,6 +107,10 @@ public class LoginActivity extends Activity{
                         editor.commit();
                     }
                     login();
+
+
+
+                  
 
                   //  buttondl.performClick();
 
