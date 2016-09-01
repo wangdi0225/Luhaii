@@ -22,21 +22,27 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".activity.LoginActivity">
+        <activity android:name=".activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".activity.GuideActivity"/>
         <activity android:name=".activity.ZHGuanLi"/>
         <activity android:name=".activity.HomepageActivity"/>
-        <activity android:name=".activity.ViewPagerDemoActivity"/>
         <activity android:name=".activity.MainActivity"/>
-        <activity android:name=".activity.SplashActivity"/>
+        <activity android:name=".activity.LoginActivity"/>
         <activity android:name=".activity.SigninActivity"/>
         <activity android:name=".activity.VerifyActivity"/>
         <activity android:name=".activity.YingdaoyeActivity"/>
-        <activity android:name=".product.Guide"/>
         <activity android:name=".activity.QQzhucheActivity"/>
+        <activity android:name=".activity.WangjimimaActivity"/>
+        <activity android:name=".activity.XinmimaActivity"/>
+        <activity android:name=".activity.JiFenShangChengActivity"/>
+        <activity android:name=".activity.WoDeJiFenActivity"/>
+        <activity android:name=".activity.WoDeTieZiActivity"/>
+        <activity android:name=".activity.XiTongSheZheActivity"/>
+
     </application>
 </manifest>

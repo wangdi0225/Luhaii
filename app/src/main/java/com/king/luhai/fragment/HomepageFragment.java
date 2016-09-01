@@ -1,4 +1,5 @@
 package com.king.luhai.fragment;
+
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -13,12 +14,14 @@ import android.view.ViewGroup;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListView;
+
 import com.king.luhai.adapter.HomepageAdapter;
 import com.king.luhai.adapter.HomepageGridviewAdapter;
 import com.king.luhai.adapter.HomepageListViewAdapter;
 import com.king.luhai.adapter.RegoinAdapter;
 import com.king.luhai.product.GridviewList;
 import com.king.luhai.product.HomepageListview;
+
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
@@ -52,10 +55,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class HomepageFragment extends Fragment {
     private HomepageGridviewAdapter homepageGridviewAdapter;
     private HomepageListViewAdapter homepageListViewAdapter;
-    private ListView listView, list1, list2;
+    private ListView listView;
     private GridView gridview;
     private View header;
-    private List<RegoinList> regoinLists = new ArrayList<RegoinList>();
     private List<HomepageListview> listlists = new ArrayList<HomepageListview>();
     private List<GridviewList> gridlist = new ArrayList<GridviewList>();
     private String[] name = {"猪哥我爱你", "本萌妹超厉害"};
@@ -66,16 +68,11 @@ public class HomepageFragment extends Fragment {
     private String[] zhudui = {"2", "3"};
     private String[] pinglun = {"2", "4"};
     private String[] dianzhan = {"13", "99+"};
-    private String[] dianxqu = {"艾欧尼亚", "祖安", "洛克萨斯", "班德尔城", "皮尔特洛夫", "战争学院", "巨神峰", "雷瑟守备", "裁决之地", "黑色玫瑰", "暗影岛", "钢铁烈阳", "均衡教派", "水晶之痕"};
-    private String[] wangtongqu = {"比尔吉沃特", "德玛西亚", "弗雷尔卓德", "无畏先锋"};
     private int[] listicon = {R.mipmap.lovepig, R.mipmap.te11};
     private int[] image = {0, R.mipmap.mao};
     private ArrayList<Fragment> fragmentlist;
     private String[] titleone = {"撸友新动态", "官方新动态", "精彩视频集锦", "转转赢积分"};
     private String[] titletwo = {"不错过每分信息", "时刻了解最新咨询", "各种精彩搞笑合辑", "积分翻倍好机会"};
-    private String[] regoinlist = {"全部", "电信", "网通", "其他"};
-    private int[] to = {R.id.name};
-    private String[] from = {"name"};
     private int[] icon = {R.mipmap.luoli, R.mipmap.wuya, R.mipmap.amumu, R.mipmap.wuya};
     private ImageView[] imageViews = null;
     private ImageView imageView = null;
@@ -83,17 +80,11 @@ public class HomepageFragment extends Fragment {
     private AtomicInteger what = new AtomicInteger(0);
     private boolean isContinue = true;
     private HomepageAdapter homepageAdapter;
-    private RegoinAdapter regoinAdapter;
     private ViewPager viewPager;
-    private TextView regoin;
-    private SimpleAdapter simpleAdapter;
-    private List<Map<String, Object>> regoninlist;
-
-
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.item_homepagetitle, container, false);
+        View v = inflater.inflate(R.layout.item_homepagetitleone, container, false);
         header = LayoutInflater.from(getActivity()).inflate(
                 R.layout.item_homepage, null);
 
@@ -101,18 +92,12 @@ public class HomepageFragment extends Fragment {
         homepageAdapter = new HomepageAdapter(getActivity().getSupportFragmentManager(), fragmentlist);
         viewPager = (ViewPager) header.findViewById(R.id.team_viewpager);
         viewPager.setAdapter(homepageAdapter);
+        viewPager.setOffscreenPageLimit(3);
         gridview = (GridView) header.findViewById(R.id.homepage_gridview);
         listView = (ListView) v.findViewById(R.id.homepage_listview);
-        regoin = (TextView) v.findViewById(R.id.region);
-        regoin.setOnClickListener(onClickListener);
         listView.addHeaderView(header);
-        list1 = (ListView) v.findViewById(R.id.list1);
-        list2 = (ListView) v.findViewById(R.id.list2);
         homepageListViewAdapter = new HomepageListViewAdapter(getActivity());
-        regoinAdapter = new RegoinAdapter(getActivity());
         homepageGridviewAdapter = new HomepageGridviewAdapter(getActivity());
-        regoninlist=new ArrayList<Map<String,Object>>();
-        simpleAdapter = new SimpleAdapter(getActivity(), regoninlist, R.layout.ite_goincg, from, to);
         listView.setAdapter(homepageListViewAdapter);
         gridview.setAdapter(homepageGridviewAdapter);
         addlist();
@@ -120,45 +105,6 @@ public class HomepageFragment extends Fragment {
         initViewPager(header);
         return v;
     }
-
-    View.OnClickListener onClickListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            switch (v.getId()) {
-                case R.id.region:
-                    change();
-
-                    break;
-
-
-                default:
-                    break;
-            }
-
-        }
-    };
-
-    private void change() {
-        addregoinlist();
-        list1.setAdapter(regoinAdapter);
-        listView.removeHeaderView(header);
-        homepageListViewAdapter.setData(null);
-
-    }
-
-
-
-
-    private void addregoinlist() {
-        for (int i = 0; i < 4; i++) {
-            RegoinList regoinList = new RegoinList();
-            regoinList.name = regoinlist[i];
-
-            regoinLists.add(regoinList);
-        }
-        regoinAdapter.setData(regoinLists);
-    }
-
 
     private void adddate() {
         fragmentlist = new ArrayList<Fragment>();
@@ -376,8 +322,6 @@ public class HomepageFragment extends Fragment {
             listviewlist.dianzhan = dianzhan[i];
             listviewlist.pinglun = pinglun[i];
             listviewlist.image = image[i];
-
-
             listlists.add(listviewlist);
         }
 

@@ -1,7 +1,9 @@
 package com.king.luhai.activity;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -16,9 +18,7 @@ import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.king.luhai.R;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -41,12 +41,13 @@ public class LoginActivity extends Activity{
     private Button buttondl,buttonzc;
     private CheckBox checkBox;
     private TextView textViewwjmm,textViewqq,textViewwb;
+    SharedPreferences sp = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
+        sp = this.getSharedPreferences("userinfo", Context.MODE_PRIVATE);
         dote();
-
     }
     private void dote(){
         imageButtontx= (ImageButton) findViewById(R.id.denglu_touxiang);
@@ -61,7 +62,13 @@ public class LoginActivity extends Activity{
         imageButtontx.setOnClickListener(onClickListener);
         buttondl.setOnClickListener(onClickListener);
         buttonzc.setOnClickListener(onClickListener);
-        checkBox.setOnClickListener(onClickListener);
+        if (sp.getBoolean("checkboxBoolean", false))
+        {
+            editTextzh.setText(sp.getString("uname", null));
+            editTextmm.setText(sp.getString("upswd", null));
+            checkBox.setChecked(true);
+
+        }
         textViewwjmm.setOnClickListener(onClickListener);
         textViewqq.setOnClickListener(onClickListener);
         textViewwb.setOnClickListener(onClickListener);
@@ -76,7 +83,35 @@ public class LoginActivity extends Activity{
                     Toast.makeText(LoginActivity.this,"头像",Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.denglu_denglu:
+
+
                     login();
+
+                    String name = editTextzh.getText().toString();
+                    String pswd = editTextmm.getText().toString();
+                    boolean CheckBoxLogin = checkBox.isChecked();
+                    if (CheckBoxLogin)
+                    {
+                        SharedPreferences.Editor editor = sp.edit();
+                        editor.putString("uname", name);
+                        editor.putString("upswd", pswd);
+                        editor.putBoolean("checkboxBoolean", true);
+                        editor.commit();
+                    }
+                    else
+                    {
+                        SharedPreferences.Editor editor = sp.edit();
+                        editor.putString("uname", null);
+                        editor.putString("upswd", null);
+                        editor.putBoolean("checkboxBoolean", false);
+                        editor.commit();
+                    }
+
+
+
+
+                  
+
                   //  buttondl.performClick();
 
                     break;
@@ -84,11 +119,9 @@ public class LoginActivity extends Activity{
                    intent.setClass(LoginActivity.this,SigninActivity.class);
                     startActivity(intent);
                     break;
-                case R.id.denglu_jizhumima:
-                    Toast.makeText(LoginActivity.this,"头像",Toast.LENGTH_SHORT).show();
-                    break;
                 case R.id.denglu_wangjimima:
-                    Toast.makeText(LoginActivity.this,"头像",Toast.LENGTH_SHORT).show();
+                   intent.setClass(LoginActivity.this,WangjimimaActivity.class);
+                    startActivity(intent);
                     break;
                 case R.id.denglu_qqdenglu:
                     Toast.makeText(LoginActivity.this,"头像",Toast.LENGTH_SHORT).show();
