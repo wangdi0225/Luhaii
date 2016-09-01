@@ -43,7 +43,7 @@ public class JiFenShangChengActivity extends Activity {
               switch (view.getId()){
                   case R.id.jifen_back:
                       Intent intent=new Intent();
-                      intent.setClass(JiFenShangChengActivity.this,ZhuanFaActivity.class);
+                      intent.setClass(JiFenShangChengActivity.this,HomepageActivity.class);
                       startActivity(intent);
 
                       break;

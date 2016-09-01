@@ -13,7 +13,7 @@ import com.king.luhai.R;
 public class XiTongSheZheActivity extends Activity {
 
     ImageView guanlihao_imageView,anquanhao_imageView,tongyong_imageView,shezhi_yinsi,fankuai_imageView,
-                 guanyu_women,tuichu_imageView;
+                 guanyu_women,tuichu_imageView,xitong_shezhi_back;
     TextView qinghuancun_textView;
 
     @Override
@@ -31,6 +31,9 @@ public class XiTongSheZheActivity extends Activity {
         tuichu_imageView=(ImageView)findViewById(R.id.tuichu_imageView);
 
         qinghuancun_textView=(TextView)findViewById(R.id.qinghuancun_textView);
+
+        xitong_shezhi_back=(ImageView)findViewById(R.id.xitong_shezhi_back);
+        xitong_shezhi_back.setOnClickListener(listener);
 
 
         qinghuancun_textView.setOnClickListener(listener);
@@ -57,6 +60,13 @@ public class XiTongSheZheActivity extends Activity {
                     Intent intent=new Intent();
                     intent.setClass(XiTongSheZheActivity.this,GuanYuWoMenActivity.class);
                     startActivity(intent);
+
+                    break;
+
+                case R.id.xitong_shezhi_back:
+                    Intent intent2=new Intent();
+                    intent2.setClass(XiTongSheZheActivity.this,HomepageActivity.class);
+                    startActivity(intent2);
 
                     break;
 
