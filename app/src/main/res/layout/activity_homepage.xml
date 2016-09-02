@@ -4,11 +4,73 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/homepage_viewpager"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="50dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black">
+        </android.support.v4.view.ViewPager>
 
+        <LinearLayout
+            android:id="@+id/linear"
+           android:layout_alignParentBottom="true"
+            android:background="@color/homepageback"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="大家来搞基"
+                android:textSize="10dp"
+                android:gravity="center"
+                android:drawableTop="@mipmap/tx7"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:drawableTop="@mipmap/tx6"
+                android:text="好想被强奸"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="10dp"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
 
+                android:layout_height="match_parent"
+                android:drawableTop="@mipmap/tx2"
+                android:text="我要上了你"
+                android:gravity="center"
+                android:textSize="10dp"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:drawableTop="@mipmap/tx4"
+                android:text="我要吃奶奶"
+                android:gravity="center"
+                android:textSize="10dp"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
         <RadioGroup
             android:id="@+id/homepage_radiogroup"
             android:layout_width="match_parent"
@@ -65,16 +127,10 @@
         </RadioGroup>
 
 
-        <android.support.v4.view.ViewPager
-            android:id="@+id/homepage_viewpager"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_above="@id/homepage_radiogroup"
-            android:textColor="@color/black">
 
-        </android.support.v4.view.ViewPager>
 
         <ImageView
+            android:id="@+id/center_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -83,8 +139,9 @@
             android:background="@drawable/yuan"
             android:padding="10dp"
             android:src="@mipmap/bottom_logo"
+              />
 
-            />
 
     </RelativeLayout>
+
 </LinearLayout>

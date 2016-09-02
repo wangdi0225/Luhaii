@@ -1,12 +1,23 @@
 package com.king.luhai.activity;
+
 import android.graphics.drawable.Drawable;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
+import android.view.animation.RotateAnimation;
+import android.view.animation.TranslateAnimation;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+
 import com.king.luhai.adapter.HomepageAdapter;
 import com.king.luhai.R;
 import com.king.luhai.fragment.FriendFragment;
@@ -14,6 +25,7 @@ import com.king.luhai.fragment.HomepageFragment;
 import com.king.luhai.fragment.HomepageFragmenttitle;
 import com.king.luhai.fragment.MessageFragment;
 import com.king.luhai.fragment.MyFragment;
+
 import java.util.ArrayList;
 
 /**
@@ -26,6 +38,10 @@ public class HomepageActivity extends FragmentActivity {
     HomepageAdapter homepageAdapter;
     ViewPager viewPager;
     RadioGroup radiogroup;
+    ImageView centertitle;
+    LinearLayout linearLayout;
+    private boolean ischeck=true;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -34,6 +50,10 @@ public class HomepageActivity extends FragmentActivity {
         shouye = (RadioButton) findViewById(R.id.shouye);
         xiaoxi = (RadioButton) findViewById(R.id.xiaoxi);
         wode = (RadioButton) findViewById(R.id.wode);
+        centertitle = (ImageView) findViewById(R.id.center_title);
+        linearLayout=(LinearLayout)findViewById(R.id.linear);
+        centertitle.setOnClickListener(onClickListener);
+
         pengyou = (RadioButton) findViewById(R.id.pengyou);
         getDate();
         homepageAdapter = new HomepageAdapter(getSupportFragmentManager(), fragmentlist);
@@ -43,6 +63,71 @@ public class HomepageActivity extends FragmentActivity {
         viewPager.setOnPageChangeListener(onPageChangeListener);
         viewPager.setOffscreenPageLimit(4);
         radiogroup.setOnCheckedChangeListener(onCheckedChangeListener);
+
+    }
+
+    View.OnClickListener onClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            showPopupWindow(view);
+        }
+    };
+
+    public void showPopupWindow(View view) {
+        rotating();
+      if (ischeck) {
+          moveup();
+          viewPager.setBackgroundResource(R.color.homepageback);
+          ischeck=false;
+      }else {
+          movedown();
+          viewPager.setBackgroundResource(R.color.white);
+          ischeck=true;
+      }
+    }
+    public void movedown(){
+        AnimationSet animationSet1 = new AnimationSet(true);
+        TranslateAnimation translateAnimation =
+                new TranslateAnimation(
+                        Animation.RELATIVE_TO_SELF, 0f,//开始的X
+                        Animation.RELATIVE_TO_SELF, 0f,//j
+                        Animation.RELATIVE_TO_SELF, -1.5f,//开始的Y
+                        Animation.RELATIVE_TO_SELF, 0f);
+        translateAnimation.setDuration(1000);
+        animationSet1.addAnimation(translateAnimation);
+        animationSet1.setFillAfter(true);
+        linearLayout.startAnimation(animationSet1);
+    }
+    public void moveup(){
+        AnimationSet animationSet1 = new AnimationSet(true);
+        TranslateAnimation translateAnimation =
+                new TranslateAnimation(
+                        Animation.RELATIVE_TO_SELF, 0f,//开始的X
+                        Animation.RELATIVE_TO_SELF, 0f,
+                        Animation.RELATIVE_TO_SELF, 0f,//开始的Y
+                        Animation.RELATIVE_TO_SELF, -1.5f);
+        translateAnimation.setDuration(1000);
+        animationSet1.addAnimation(translateAnimation);
+        animationSet1.setFillAfter(true);
+        linearLayout.startAnimation(animationSet1);
+    }
+    public void rotating(){
+        AnimationSet animationSet = new AnimationSet(true);
+
+        //参数1：从哪个旋转角度开始
+        //参数2：转到什么角度
+        //后4个参数用于设置围绕着旋转的圆的圆心在哪里
+        //参数3：确定x轴坐标的类型，有ABSOLUT绝对坐标、RELATIVE_TO_SELF相对于自身坐标、RELATIVE_TO_PARENT相对于父控件的坐标
+        //参数4：x轴的值，0.5f表明是以自身这个控件的一半长度为x轴
+        //参数5：确定y轴坐标的类型
+        //参数6：y轴的值，0.5f表明是以自身这个控件的一半长度为x轴
+
+        RotateAnimation rotateAnimation = new RotateAnimation(0, 360,
+                Animation.RELATIVE_TO_SELF, 0.5f,
+                Animation.RELATIVE_TO_SELF, 0.5f);
+        rotateAnimation.setDuration(1000);
+        animationSet.addAnimation(rotateAnimation);
+        centertitle.startAnimation(animationSet);
 
     }
 
