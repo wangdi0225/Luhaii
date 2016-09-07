@@ -35,10 +35,9 @@ public class XiTongSheZheActivity extends Activity {
 
 
         qinghuancun_textView=(TextView)findViewById(R.id.qinghuancun_textView);
-
-
         xitong_shezhi_back=(ImageView)findViewById(R.id.xitong_shezhi_back);
         xitong_shezhi_back.setOnClickListener(listener);
+<<<<<<< HEAD
 
         qinghuancun_textView.setOnClickListener(listener);
 
@@ -53,6 +52,18 @@ public class XiTongSheZheActivity extends Activity {
         duichuzhanghao_linearLayout.setOnClickListener(listener);
 
 
+=======
+        xitong_shezhi_back=(ImageView)findViewById(R.id.xitong_shezhi_back);
+        xitong_shezhi_back.setOnClickListener(listener);
+        qinghuancun_textView.setOnClickListener(listener);
+        guanlihao_imageView.setOnClickListener(listener);
+        anquanhao_imageView.setOnClickListener(listener);
+        tongyong_imageView.setOnClickListener(listener);
+        shezhi_yinsi.setOnClickListener(listener);
+        fankuai_imageView.setOnClickListener(listener);
+        guanyu_women.setOnClickListener(listener);
+        tuichu_imageView.setOnClickListener(listener);
+>>>>>>> 0273d0cab9ee770000b64dc3f08158f8edd2feb5
     }
     View.OnClickListener listener=new View.OnClickListener() {
         @Override

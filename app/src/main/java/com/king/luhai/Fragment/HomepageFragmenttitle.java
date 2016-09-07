@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.king.luhai.R;
@@ -18,6 +19,7 @@ import com.king.luhai.R;
 public class HomepageFragmenttitle extends Fragment {
 
     TextView regoin;
+    ImageView duanwei;
     HomepageFragment homepageFragment;
     HomepageFragmenttel homepageFragmenttel;
     private boolean ischeck=false;
@@ -25,6 +27,8 @@ public class HomepageFragmenttitle extends Fragment {
                              Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.item_homepagetitle, container, false);
+        duanwei=(ImageView)v.findViewById(R.id.duanwei);
+        duanwei.setOnClickListener(onClickListenerduanwei);
         regoin = (TextView) v.findViewById(R.id.region);
         regoin.setOnClickListener(onClickListener);
         setDefaultFragment();
@@ -56,5 +60,11 @@ public class HomepageFragmenttitle extends Fragment {
                 transaction.commit();
             }
         };
+        View.OnClickListener onClickListenerduanwei  = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                
 
+            }
+        };
 }
