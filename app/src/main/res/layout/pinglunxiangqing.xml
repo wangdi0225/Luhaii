@@ -5,63 +5,66 @@
               android:layout_height="match_parent"
               android:background="#DADBDD">
 
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="#343434"
 
-        >
 
-        <LinearLayout
-            android:id="@+id/pinglun_xiangqing_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:layout_gravity="center_vertical"
+            android:background="#343434"
             >
+
+            <TextView
+                android:id="@+id/pinglun_xiangqing_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@mipmap/back"
+                android:drawablePadding="5dp"
+                android:text="返回"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:textSize="15sp"
+                android:textColor="#ffffff"
+
+                />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@mipmap/back"
-                android:drawablePadding="5dp"
-                android:text="返回"
-                android:textSize="15sp"
+                android:text="详情"
+              android:layout_centerInParent="true"
                 android:textColor="#ffffff"
-                android:layout_margin="10dp"
-                android:layout_centerVertical="true"
+                android:textSize="18sp"
+
                 />
-
-
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="详情"
-            android:layout_centerInParent="true"
-            android:textColor="#ffffff"
-            android:textSize="18sp"
-
-            />
+        </RelativeLayout>
 
 
 
-    </RelativeLayout>
+
+
 
     <ListView
-        android:id="@+id/pinglunxiangqing"
+        android:id="@+id/pinglun_xiangqingList"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="10"
         android:background="#ffffff"
         ></ListView>
 
+
+
+
+
     <LinearLayout
+        android:id="@+id/edlayout"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="#ffffff"
-
+        android:visibility="gone"
         >
 
         <ImageView
@@ -99,10 +102,12 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="#343434"
-
+        android:visibility="gone"
+        android:id="@+id/bqlayout"
         >
 
         <EditText
+            android:id="@+id/pinglun_edit"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/sousuokuang"
@@ -123,6 +128,55 @@
             />
 
     </RelativeLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:background="#343434"
+        android:layout_weight="1"
+        android:id="@+id/pllayout"
+        >
 
+        <TextView
+            android:id="@+id/dianzan_xiangqingzhuanfa"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/zhuanfa_jiantou"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:paddingLeft="30dp"
+            android:drawablePadding="5dp"
+            android:text="转发"
+            android:textColor="#ffffff"
+            />
+
+        <TextView
+            android:id="@+id/dianzan_xiangqingpinglun"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/xiaoxi_pinglunbai"
+            android:paddingLeft="30dp"
+            android:gravity="center_vertical"
+            android:drawablePadding="5dp"
+            android:text="评论"
+            android:textColor="#ffffff"
+            />
+
+        <TextView
+            android:id="@+id/dianzan_xiangqingdianzan"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/dianzan_an"
+            android:paddingLeft="30dp"
+            android:gravity="center_vertical"
+            android:drawablePadding="5dp"
+            android:text="点赞"
+            android:textColor="#FFFFFF"
+            />
+
+
+    </LinearLayout>
 
 </LinearLayout>

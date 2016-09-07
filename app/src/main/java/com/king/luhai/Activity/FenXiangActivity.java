@@ -60,7 +60,7 @@ public class FenXiangActivity extends Activity {
 
                    case R.id.fenxiang_weizhi:
                        Intent intent2=new Intent();
-                       intent2.setClass(FenXiangActivity.this,ZhuanFaActivity.class);
+                       intent2.setClass(FenXiangActivity.this,WeiZhiActivity.class);
                        startActivity(intent2);
 
                        break;
@@ -74,7 +74,7 @@ public class FenXiangActivity extends Activity {
 
                    case R.id.fenxiang_shui:
                        Intent intent4=new Intent();
-                       intent4.setClass(FenXiangActivity.this,ZhuanFaActivity.class);
+                       intent4.setClass(FenXiangActivity.this,ShuiKeKanActivity.class);
                        startActivity(intent4);
 
                        break;

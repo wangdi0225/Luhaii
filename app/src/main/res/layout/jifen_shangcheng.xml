@@ -43,6 +43,7 @@
 
 
     <LinearLayout
+        android:id="@+id/wodejifen_linearLayout"
         android:background="#ffffff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -77,6 +78,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/jifenSp_linearLayout"
         android:background="#ffffff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -107,6 +109,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/yigouSp_linearLayout"
         android:background="#ffffff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -139,6 +142,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/shoudaoSp_linearLayout"
         android:background="#ffffff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -170,6 +174,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/songchuSp_linearLayout"
         android:background="#ffffff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

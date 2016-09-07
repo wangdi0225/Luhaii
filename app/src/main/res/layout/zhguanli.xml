@@ -61,6 +61,7 @@
             android:gravity="center"
             >
             <TextView
+                android:id="@+id/tianjiahaoma"
             android:drawableLeft="@mipmap/tianjia"
             android:layout_width="wrap_content"
             android:drawablePadding="5dp"
@@ -72,7 +73,7 @@
         </LinearLayout>
 
         <Button
-
+            android:id="@+id/zhuanghaoGL_tuichu"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@drawable/faxiaoxi_fa"

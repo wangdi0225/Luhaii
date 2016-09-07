@@ -5,13 +5,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.king.luhai.R;
 
 
 public class JiFenShangChengActivity extends Activity {
 
-    ImageView jifen_right,jifenhuanSp,maiguo_Sp,shoudao_Sp,songchu_Sp,jifenBack;
+    ImageView jifen_back;
+    LinearLayout wodejifen_linearLayout,jifenSp_linearLayout,yigouSp_linearLayout,shoudaoSp_linearLayout,songchuSp_linearLayout;
 
 
     @Override
@@ -19,20 +21,19 @@ public class JiFenShangChengActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.jifen_shangcheng);
 
-        jifen_right=(ImageView)findViewById(R.id.jifen_right);
-        jifenhuanSp=(ImageView)findViewById(R.id.jifenhuanSp);
-        maiguo_Sp=(ImageView)findViewById(R.id.maiguo_Sp);
-        shoudao_Sp=(ImageView)findViewById(R.id.shoudao_Sp);
-        songchu_Sp=(ImageView)findViewById(R.id.songchu_Sp);
-        jifenBack=(ImageView) findViewById(R.id.jifen_back);
+        wodejifen_linearLayout=(LinearLayout) findViewById(R.id.wodejifen_linearLayout);
+        jifenSp_linearLayout=(LinearLayout) findViewById(R.id.jifenSp_linearLayout);
+        yigouSp_linearLayout=(LinearLayout) findViewById(R.id.yigouSp_linearLayout);
+        songchuSp_linearLayout=(LinearLayout) findViewById(R.id.songchuSp_linearLayout);
+        shoudaoSp_linearLayout=(LinearLayout)findViewById(R.id.shoudaoSp_linearLayout);
+        jifen_back=(ImageView)findViewById(R.id.jifen_back);
 
-        jifen_right.setOnClickListener(listener);
-        jifenhuanSp.setOnClickListener(listener);
-        maiguo_Sp.setOnClickListener(listener);
-        shoudao_Sp.setOnClickListener(listener);
-        songchu_Sp.setOnClickListener(listener);
-        jifenBack.setOnClickListener(listener);
-
+        wodejifen_linearLayout.setOnClickListener(listener);
+        jifenSp_linearLayout.setOnClickListener(listener);
+        yigouSp_linearLayout.setOnClickListener(listener);
+        songchuSp_linearLayout.setOnClickListener(listener);
+        shoudaoSp_linearLayout.setOnClickListener(listener);
+        jifen_back.setOnClickListener(listener);
 
 
     }
@@ -48,41 +49,40 @@ public class JiFenShangChengActivity extends Activity {
 
                       break;
 
-                  case R.id.jifen_right:
+                  case R.id.wodejifen_linearLayout:
                       Intent intent2=new Intent();
                       intent2.setClass(JiFenShangChengActivity.this,WoDeJiFenActivity.class);
                       startActivity(intent2);
 
                       break;
 
-                  case R.id.jifenhuanSp:
+                  case R.id.jifenSp_linearLayout:
                       Intent intent3=new Intent();
                       intent3.setClass(JiFenShangChengActivity.this,DuiHuanShangPinActivty.class);
                       startActivity(intent3);
 
                       break;
 
-                  case R.id.maiguo_Sp:
+                  case R.id.yigouSp_linearLayout:
                       Intent intent4=new Intent();
-                      intent4.setClass(JiFenShangChengActivity.this,ZhuanFaActivity.class);
+                      intent4.setClass(JiFenShangChengActivity.this,GouMaiShangPinActivity.class);
                       startActivity(intent4);
 
                       break;
 
-                  case R.id.shoudao_Sp:
+                  case R.id.songchuSp_linearLayout:
                       Intent intent5=new Intent();
-                      intent5.setClass(JiFenShangChengActivity.this,ShouShangPinActivity.class);
+                      intent5.setClass(JiFenShangChengActivity.this,ShangPinActivity.class);
                       startActivity(intent5);
 
                       break;
 
-                  case R.id.songchu_Sp:
+                  case R.id.shoudaoSp_linearLayout:
                       Intent intent6=new Intent();
-                      intent6.setClass(JiFenShangChengActivity.this,ShangPinActivity.class);
+                      intent6.setClass(JiFenShangChengActivity.this,ShouShangPinActivity.class);
                       startActivity(intent6);
 
                       break;
-
 
 
                   default:

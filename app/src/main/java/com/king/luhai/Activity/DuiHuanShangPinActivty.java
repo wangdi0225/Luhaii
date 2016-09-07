@@ -1,8 +1,11 @@
 package com.king.luhai.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.SimpleAdapter;
 
 import com.king.luhai.R;
@@ -17,6 +20,7 @@ public class DuiHuanShangPinActivty extends Activity {
 
     GridView gridView;
     SimpleAdapter simpleAdapter;
+    ImageView duihuanSp_imageView;
 
     List<Map<String, Object>> lists = new ArrayList<Map<String, Object>>();
     @Override
@@ -26,16 +30,38 @@ public class DuiHuanShangPinActivty extends Activity {
 
 
         gridView = (GridView) findViewById(R.id.duihuan_gridView);
+        duihuanSp_imageView=(ImageView)findViewById(R.id.duihuanSp_imageView);
+
+        duihuanSp_imageView.setOnClickListener(onClickListener);
 
 
         String[] from = {"images", "mingzi", "jiage"};
         int[] to = {R.id.image_timos, R.id.renwu, R.id.wujia};
 
-        simpleAdapter = new SimpleAdapter(this, getLists(), R.layout.activity_duihuan, from, to);
+        simpleAdapter = new SimpleAdapter(DuiHuanShangPinActivty.this, getLists(), R.layout.activity_duihuan, from, to);
 
         gridView.setAdapter(simpleAdapter);
 
     }
+
+    View.OnClickListener onClickListener=new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+                switch (view.getId()){
+                    case R.id.duihuanSp_imageView:
+                        Intent intent=new Intent();
+                        intent.setClass(DuiHuanShangPinActivty.this,JiFenShangChengActivity.class);
+                        startActivity(intent);
+
+                        break;
+
+                    default:
+                        break;
+
+
+                };
+        }
+    };
 
     public List<Map<String, Object>> getLists() {
 

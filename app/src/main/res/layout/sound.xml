@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="fill_parent"
@@ -10,76 +11,81 @@
         >
 
         <ImageView
-            android:id="@+id/dingwei_back"
+            android:id="@+id/shengyin_zhendong"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/back_bai"
-            android:layout_margin="10dp"
+            android:padding="10dp"
             android:layout_centerVertical="true"
+
             />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#ffffff"
-            android:layout_centerInParent="true"
-            android:text="所在位置"
-            android:textSize="18sp"
-            />
-
-        <ImageView
-            android:id="@+id/weizhi_sousuo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/chart"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_margin="15dp"
-            />
 
     </RelativeLayout>
 
     <LinearLayout
+        android:id="@+id/shengyin_linearLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-
+        android:padding="10dp"
         >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="不显示位置"
+            android:text="声音"
             android:textSize="15sp"
-            android:layout_margin="10dp"
-            android:textColor="#96C8FC"
+
+
             />
-        
+
         <View
             android:layout_width="0dp"
             android:layout_height="fill_parent"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            />
 
-        <CheckBox
-            android:id="@+id/suozai_weizhi"
+        <ImageView
+            android:id="@+id/shengyin_anniu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:gravity="center"
+            android:src="@mipmap/guan"
+
+            />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="振动"
+
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            />
+
+        <ImageView
+            android:id="@+id/zhendong_anniu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/kai"
+
             />
 
 
     </LinearLayout>
 
-    <ListView
-        android:id="@+id/weizhi_listView"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:divider="#F5F5F6"
-        android:dividerHeight="2dp"
-
-        >
-
-
-    </ListView>
 
 </LinearLayout>

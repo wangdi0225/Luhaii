@@ -8,7 +8,8 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="#000000">
+        android:background="#000000"
+        android:padding="10dp">
 
         <ImageView
             android:id="@+id/yinsi_shezhi_back"
@@ -31,6 +32,7 @@
     </RelativeLayout>
 
     <LinearLayout
+        android:id="@+id/jiawoyanzheng_linearLayout"
         android:background="#ffffff"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -54,7 +56,7 @@
             android:id="@+id/jiawo_yanzheng"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/anniuguan"
+            android:src="@drawable/anniuguan"
             android:padding="10dp"
 
             />
@@ -62,12 +64,14 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/tuijianhaoyou_linearLayout"
         android:background="#ffffff"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp">
 
         <TextView
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="向我推荐QQ好友"
@@ -80,18 +84,21 @@
             android:layout_height="fill_parent"
             android:layout_weight="1"/>
 
-        <ImageView
+        <CheckBox
             android:id="@+id/wotuijian"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/annuikai"
-            android:padding="10dp"
+            android:layout_marginRight="10dp"
+            android:button="@null"
+            android:background="@drawable/kaiguan"
+
             />
 
 
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/sousuowo_linearLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="#ffffff"
@@ -109,12 +116,13 @@
             android:layout_height="fill_parent"
             android:layout_weight="1"/>
 
-        <ImageView
+        <CheckBox
             android:id="@+id/sousuowo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:src="@mipmap/annuikai"
+            android:layout_marginRight="10dp"
+            android:button="@null"
+            android:background="@drawable/kaiguan"
 
             />
 
@@ -122,6 +130,7 @@
     </LinearLayout>
     
     <LinearLayout
+        android:id="@+id/heimingdan_linearLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15sp"
@@ -155,6 +164,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/bukantade_linearLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="#ffffff"

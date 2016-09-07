@@ -2,36 +2,38 @@ package com.king.luhai.activity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.king.luhai.R;
 
+/**
+ * Created by Administrator on 2016-9-5.
+ */
+public class ShengYinActivity extends Activity {
 
-public class WoDeJiFenActivity extends Activity {
+    ImageView shengyin_zhendong;
 
-    ImageView wode_jifen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.wode_jifen);
+        setContentView(R.layout.sound);
 
-        wode_jifen=(ImageView)findViewById(R.id.wode_jifen);
+        shengyin_zhendong=(ImageView)findViewById(R.id.shengyin_zhendong);
 
-
-        wode_jifen.setOnClickListener(listener);
-
+        shengyin_zhendong.setOnClickListener(onClickListener);
 
     }
 
-    View.OnClickListener listener=new View.OnClickListener() {
+    View.OnClickListener onClickListener=new View.OnClickListener() {
         @Override
         public void onClick(View view) {
             switch (view.getId()){
-                case R.id.wode_jifen:
+                case R.id.shengyin_zhendong:
                     Intent intent=new Intent();
-                    intent.setClass(WoDeJiFenActivity.this,JiFenShangChengActivity.class);
+                    intent.setClass(ShengYinActivity.this,TongYongSystemActivity.class);
                     startActivity(intent);
 
                     break;
@@ -39,8 +41,9 @@ public class WoDeJiFenActivity extends Activity {
                 default:
                     break;
 
-
             };
         }
     };
+
+
 }

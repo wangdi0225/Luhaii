@@ -45,7 +45,7 @@ public class ZhuanFaActivity extends Activity {
                switch (view.getId()){
                    case R.id.zhuanfa_back:
                        Intent intent = new Intent();
-                       intent.setClass(ZhuanFaActivity.this, ShangPinActivity.class);
+                       intent.setClass(ZhuanFaActivity.this, PingLunActivity.class);
                        startActivity(intent);
 
                        break;
