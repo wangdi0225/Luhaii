@@ -32,6 +32,7 @@
     </RelativeLayout>
 
     <LinearLayout
+        android:id="@+id/zhanghaoGL_linearLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="#ffffff"
@@ -65,6 +66,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/zhanghaosafe_linearLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="#ffffff"
@@ -98,6 +100,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/tongyong_linearLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="#ffffff"
@@ -131,6 +134,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/qinglihuancun_linearLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="#ffffff"
@@ -167,6 +171,7 @@
 
 
     <LinearLayout
+        android:id="@+id/yinsi_systemlinearLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="#ffffff"
@@ -201,6 +206,7 @@
 
 
     <LinearLayout
+        android:id="@+id/wentifankui_linearLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="#ffffff"
@@ -235,6 +241,7 @@
 
 
     <LinearLayout
+        android:id="@+id/guanyuwomen_linearLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="#ffffff"
@@ -269,6 +276,7 @@
 
 
     <LinearLayout
+        android:id="@+id/duichuzhanghao_linearLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="#ffffff"

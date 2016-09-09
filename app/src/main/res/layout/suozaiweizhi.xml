@@ -10,6 +10,7 @@
         >
 
         <ImageView
+            android:id="@+id/dingwei_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/back_bai"
@@ -27,6 +28,7 @@
             />
 
         <ImageView
+            android:id="@+id/weizhi_sousuo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/chart"

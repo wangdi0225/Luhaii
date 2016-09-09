@@ -6,25 +6,35 @@ import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.king.luhai.R;
+
+import org.w3c.dom.Text;
 
 
 public class WoDeTieZiActivity extends Activity {
 
-    ImageView jiaru_tiezi,wode_tiezi_back;
+    ImageView wode_tiezi_back;
+
+    LinearLayout jiarudetiezi_linearLayout;
+
+    TextView yifaguo_tiezi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wode_tiezi);
 
-        jiaru_tiezi=(ImageView)findViewById(R.id.jiaru_tiezi);
+        jiarudetiezi_linearLayout=(LinearLayout) findViewById(R.id.jiarudetiezi_linearLayout);
         wode_tiezi_back=(ImageView)findViewById(R.id.wode_tiezi_back);
 
+        yifaguo_tiezi=(TextView)findViewById(R.id.yifaguo_tiezi);
+        yifaguo_tiezi.setOnClickListener(listener);
 
         wode_tiezi_back.setOnClickListener(listener);
-        jiaru_tiezi.setOnClickListener(listener);
+        jiarudetiezi_linearLayout.setOnClickListener(listener);
 
 
     }
@@ -33,7 +43,7 @@ public class WoDeTieZiActivity extends Activity {
         @Override
         public void onClick(View view) {
             switch (view.getId()){
-                case R.id.jiaru_tiezi:
+                case R.id.jiarudetiezi_linearLayout:
                     Intent intent=new Intent();
                     intent.setClass(WoDeTieZiActivity.this,JiaRuTieZiActivity.class);
                     startActivity(intent);

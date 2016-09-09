@@ -1,8 +1,12 @@
 package com.king.luhai.activity;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.SimpleAdapter;
 
 import com.king.luhai.R;
@@ -17,6 +21,7 @@ public class ShangPinActivity extends Activity {
 
     GridView gridView;
     SimpleAdapter simpleAdapter;
+    ImageView songchuSp_back;
 
     List<Map<String,Object>> lists = new ArrayList<Map<String, Object>>();
     @Override
@@ -25,8 +30,9 @@ public class ShangPinActivity extends Activity {
         setContentView(R.layout.songchu_shangping);
 
         gridView = (GridView) findViewById(R.id.songping_gridView);
+        songchuSp_back=(ImageView)findViewById(R.id.songchuSp_back);
 
-
+        songchuSp_back.setOnClickListener(onClickListener);
 
         String[] from = {"images","mingzi","jiage"};
         int[] to = {R.id.image_timos,R.id.renwu,R.id.wujia};
@@ -36,6 +42,30 @@ public class ShangPinActivity extends Activity {
         gridView.setAdapter(simpleAdapter);
 
     }
+
+    View.OnClickListener onClickListener=new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+
+            switch (view.getId()){
+                case R.id.songchuSp_back:
+                Intent intent=new Intent();
+                intent.setClass(ShangPinActivity.this,JiFenShangChengActivity.class);
+                startActivity(intent);
+
+                    break;
+
+                default:
+                    break;
+
+            };
+
+
+
+
+
+        }
+    };
 
     public List<Map<String, Object>> getLists() {
 

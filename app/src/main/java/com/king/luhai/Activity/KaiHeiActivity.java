@@ -1,12 +1,16 @@
 package com.king.luhai.activity;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.king.luhai.R;
 
@@ -16,7 +20,8 @@ import java.util.List;
 import java.util.Map;
 
 
-public class KaiHeiActivity extends Activity {
+@TargetApi(Build.VERSION_CODES.M)
+public class KaiHeiActivity extends Activity implements AdapterView.OnItemClickListener,View.OnScrollChangeListener{
 
     ListView listView;
     TextView jiarutiezi;
@@ -39,7 +44,7 @@ public class KaiHeiActivity extends Activity {
         simpleAdapter=new SimpleAdapter(KaiHeiActivity.this,lists,R.layout.activity_kaihei,from,to);
 
         listView.setAdapter(simpleAdapter);
-
+        listView.setOnItemClickListener(this);
         getData();
 
      //   kaihe_jiaru=(ImageView)findViewById(R.id.kaihe_jiaru);
@@ -76,5 +81,14 @@ public class KaiHeiActivity extends Activity {
     };
 
 
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        Toast.makeText(KaiHeiActivity.this,i,Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onScrollChange(View view, int i, int i1, int i2, int i3) {
+
+    }
 }
 

@@ -1,8 +1,11 @@
 package com.king.luhai.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.SimpleAdapter;
 
 import com.king.luhai.R;
@@ -17,6 +20,7 @@ public class ShouShangPinActivity extends Activity {
 
     GridView gridView;
     SimpleAdapter simpleAdapter;
+    ImageView shoudaoSp_back;
 
     List<Map<String,Object>> lists = new ArrayList<Map<String, Object>>();
     @Override
@@ -25,6 +29,9 @@ public class ShouShangPinActivity extends Activity {
         setContentView(R.layout.shoudao_shangpin);
 
         gridView = (GridView) findViewById(R.id.shouping_gridView);
+        shoudaoSp_back=(ImageView)findViewById(R.id.shoudaoSp_back);
+
+        shoudaoSp_back.setOnClickListener(onClickListener);
 
 
 
@@ -36,6 +43,24 @@ public class ShouShangPinActivity extends Activity {
         gridView.setAdapter(simpleAdapter);
 
     }
+
+    View.OnClickListener onClickListener=new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+              switch (view.getId()){
+                  case R.id.shoudaoSp_back:
+                      Intent intent=new Intent();
+                      intent.setClass(ShouShangPinActivity.this,JiFenShangChengActivity.class);
+                      startActivity(intent);
+
+                      break;
+
+                  default:
+                      break;
+
+              };
+        }
+    };
 
     public List<Map<String, Object>> getLists() {
 

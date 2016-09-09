@@ -12,6 +12,7 @@
         >
 
         <ImageView
+            android:id="@+id/tongyongsystem_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/back_bai"
@@ -34,6 +35,7 @@
     </RelativeLayout>
 
     <LinearLayout
+        android:id="@+id/ziti_system_linearLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -70,6 +72,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/beizhu_systemLinearLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -89,24 +92,23 @@
             android:layout_height="fill_parent"
             android:layout_weight="1"/>
 
-        <ImageView
+        <CheckBox
 
             android:id="@+id/beizhu_anniu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/anniuguan"
-            android:padding="10dp"
+            android:layout_width="20dp"
+            android:layout_height="12dp"
+            android:background="@drawable/anniuguan"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:button="@null"
 
-
-            />
-
-
-
+            android:checked="false"/>
 
 
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/kuaisu_linearLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -132,7 +134,7 @@
             android:id="@+id/tuidong_anniu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/annuikai"
+            android:src="@drawable/annuikai"
             android:padding="10dp"
 
             />
@@ -143,6 +145,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/zidonghuan_linearLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="#ffffff"
@@ -165,7 +168,7 @@
             android:id="@+id/qiehuan_anniu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/annuikai"
+            android:src="@drawable/kaiguan"
             android:padding="10dp"
 
 
@@ -174,6 +177,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/shengdong_linearLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="#ffffff"

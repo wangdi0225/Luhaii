@@ -1,8 +1,11 @@
 package com.king.luhai.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.SimpleAdapter;
 
 import com.king.luhai.R;
@@ -17,6 +20,7 @@ public class GouMaiShangPinActivity extends Activity {
 
     GridView gridView;
     SimpleAdapter simpleAdapter;
+    ImageView goumaiSp_back;
 
     List<Map<String, Object>> lists = new ArrayList<Map<String, Object>>();
 
@@ -26,6 +30,9 @@ public class GouMaiShangPinActivity extends Activity {
         setContentView(R.layout.goumai_shangpin);
 
         gridView = (GridView) findViewById(R.id.goumai_gridView);
+        goumaiSp_back=(ImageView)findViewById(R.id.goumaiSp_back);
+
+        goumaiSp_back.setOnClickListener(litener);
 
 
         String[] from = {"images", "mingzi", "jiage"};
@@ -36,6 +43,24 @@ public class GouMaiShangPinActivity extends Activity {
         gridView.setAdapter(simpleAdapter);
 
     }
+
+    View.OnClickListener litener=new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+               switch (view.getId()){
+                   case R.id.goumaiSp_back:
+                       Intent intent=new Intent();
+                       intent.setClass(GouMaiShangPinActivity.this,JiFenShangChengActivity.class);
+                       startActivity(intent);
+
+                       break;
+
+                   default:
+                       break;
+
+               };
+        }
+    };
 
     public List<Map<String, Object>> getLists() {
 
