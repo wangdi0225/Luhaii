@@ -92,7 +92,6 @@ public class HomepageListViewAdapter extends BaseAdapter {
         viewHolder.jiaru.setText(myList.get(position).jiaru);
         viewHolder.pinglun.setText(myList.get(position).pinglun);
         viewHolder.dianzhan.setText(myList.get(position).dianzhan);
-
         viewHolder.icon.setImageResource(myList.get(position).icon);
         viewHolder.image.setImageResource(myList.get(position).image);
 

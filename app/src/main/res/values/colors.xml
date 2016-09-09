@@ -3,7 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-
+    <color name="homepageback">#e1333333</color>
     <color name="zhuse">#BB8B36</color>
     <color name="beijingse">#F3F5F6</color>
     <color name="miaobianse">#CFD1D1</color>
@@ -16,6 +16,7 @@
     <color name="tubiaose1">#DDA339</color>
     <color name="tubiaose2">#CDCDCD</color>
     <color name="haoyoucolor">#E9F83D</color>
+    <color name="green">#00ff00</color>
 
 
 
@@ -27,5 +28,6 @@
     <color name="bule">#A1B3FD</color>
     <color name="huise">#B2B2B2</color>
     <color name="zhuhui">#eeeeee</color>
+    <color name="red">#ff0000</color>
 
 </resources>
