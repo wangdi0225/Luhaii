@@ -83,10 +83,7 @@ public class LoginActivity extends Activity{
                     Toast.makeText(LoginActivity.this,"头像",Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.denglu_denglu:
-
-
                     login();
-
                     String name = editTextzh.getText().toString();
                     String pswd = editTextmm.getText().toString();
                     boolean CheckBoxLogin = checkBox.isChecked();
@@ -106,14 +103,7 @@ public class LoginActivity extends Activity{
                         editor.putBoolean("checkboxBoolean", false);
                         editor.commit();
                     }
-
-
-
-
-                  
-
                   //  buttondl.performClick();
-
                     break;
                 case R.id.denglu_zhuche:
                    intent.setClass(LoginActivity.this,SigninActivity.class);

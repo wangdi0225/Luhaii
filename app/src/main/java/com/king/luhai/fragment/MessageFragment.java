@@ -37,9 +37,7 @@ public class MessageFragment extends Fragment {
         haoyou= new HaoyouFragment();
         transaction.replace(R.id.fragment,haoyou);
         transaction.commit();
-
     }
-
         View.OnClickListener onClickListener =new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,7 +51,6 @@ public class MessageFragment extends Fragment {
                         transaction.replace(R.id.fragment,haoyou);
                         tabhaoyou.setBackgroundResource(R.drawable.haoyouyuan);
                         tabxiaoxi.setBackgroundResource(R.color.black);
-
                         break;
                     case R.id.xiaoxi:
                         if (xiaoxi==null){
@@ -67,6 +64,4 @@ public class MessageFragment extends Fragment {
                 transaction.commit();
             }
         };
-
-
     }

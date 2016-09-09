@@ -38,11 +38,6 @@ public class MyFragment extends Fragment {
         myjifeng.setOnClickListener(onClickListener);
         mytiezhi.setOnClickListener(onClickListener);
         mysystem.setOnClickListener(onClickListener);
-
-
-
-
-
         return v;
     }
     View.OnClickListener onClickListener = new View.OnClickListener() {

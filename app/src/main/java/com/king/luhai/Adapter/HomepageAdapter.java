@@ -17,19 +17,15 @@ public class HomepageAdapter extends FragmentPagerAdapter {
         super(fm);
         // TODO Auto-generated constructor stub
     }
-
     public HomepageAdapter(FragmentManager fm, ArrayList<Fragment> fragmentlist) {
         super(fm);
         this.fragmentlist = fragmentlist;
         // TODO 自动生成的构造函数存根
     }
-
-
     @Override
     public Fragment getItem(int position) {
         return fragmentlist.get(position);
     }
-
     @Override
     public int getCount() {
         return fragmentlist.size();

@@ -117,7 +117,6 @@ public class HomepageFragmenttitle extends Fragment {
                     checkduanwei=true;
                 }
                 }
-
             }
         };
 }

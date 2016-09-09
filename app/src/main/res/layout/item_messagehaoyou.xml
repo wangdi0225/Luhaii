@@ -19,7 +19,11 @@
         android:layout_marginTop="10dp"
         android:paddingRight="30dp"
         />
-
+        <ExpandableListView
+            android:id="@+id/lists"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ExpandableListView>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -50,35 +54,6 @@
 
             />
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        >
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/yousanjiao"
-            android:layout_gravity="center"
-            android:layout_marginLeft="32dp"
-            />
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:text="@string/gamefriend"
-            android:gravity="center_vertical"
-            android:layout_marginLeft="30dp"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="@string/aiouniya"
-            android:textSize="16sp"
-            android:layout_marginRight="20dp"
-            android:gravity="center"
 
-            />
-    </LinearLayout>
 
 </LinearLayout>

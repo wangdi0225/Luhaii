@@ -77,11 +77,11 @@ public class HomepageActivity extends FragmentActivity {
         rotating();
       if (ischeck) {
           moveup();
-          viewPager.setBackgroundResource(R.color.homepageback);
+          //viewPager.setBackgroundResource(R.color.homepageback);
           ischeck=false;
       }else {
           movedown();
-          viewPager.setBackgroundResource(R.color.white);
+        //  viewPager.setBackgroundResource(R.color.white);
           ischeck=true;
       }
     }
