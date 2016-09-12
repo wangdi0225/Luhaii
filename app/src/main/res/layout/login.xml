@@ -159,6 +159,7 @@
             android:layout_centerVertical="true"
             android:gravity="center"
             android:drawablePadding="5dp"
+            android:visibility="gone"
             />
         <TextView
             android:id="@+id/denglu_weibodenglu"
@@ -172,6 +173,7 @@
             android:layout_alignParentRight="true"
             android:gravity="center"
             android:drawablePadding="5dp"
+            android:visibility="gone"
             />
     </RelativeLayout>
 </LinearLayout>
