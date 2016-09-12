@@ -107,7 +107,6 @@ public class VerifyActivity extends Activity {
                         return;
                     } // 2. 通过sdk发送短信验证
                     SMSSDK.getVerificationCode("86", phoneNums);
-
                     // 3. 把按钮变成不可点击，并且显示倒计时（正在获取）
                     textViewcx.setClickable(false);
                     textViewcx.setText("重新发送(" + TIME + ")");
