@@ -17,7 +17,6 @@ import java.util.Map;
 
 
 public class JiaRuTieZiActivity extends Activity {
-
     ListView listView;
     TextView textView;
     ImageView imageView;
