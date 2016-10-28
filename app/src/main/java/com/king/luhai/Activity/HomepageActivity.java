@@ -17,9 +17,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
+import com.king.luhai.View.CenterDialog;
 import com.king.luhai.adapter.HomepageAdapter;
 import com.king.luhai.R;
+import com.king.luhai.adapter.Mydialog;
 import com.king.luhai.fragment.FriendFragment;
 import com.king.luhai.fragment.HomepageFragment;
 import com.king.luhai.fragment.HomepageFragmenttitle;
@@ -39,6 +42,7 @@ public class HomepageActivity extends FragmentActivity {
     ViewPager viewPager;
     RadioGroup radiogroup;
     ImageView centertitle;
+    private Mydialog mydialog;
     LinearLayout linearLayout;
     private boolean ischeck=true;
 
@@ -65,7 +69,7 @@ public class HomepageActivity extends FragmentActivity {
         radiogroup.setOnCheckedChangeListener(onCheckedChangeListener);
 
     }
-
+//动画监听
     View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
@@ -75,16 +79,26 @@ public class HomepageActivity extends FragmentActivity {
 
     public void showPopupWindow(View view) {
         rotating();
-      if (ischeck) {
-          moveup();
-          //viewPager.setBackgroundResource(R.color.homepageback);
-          ischeck=false;
-      }else {
-          movedown();
-        //  viewPager.setBackgroundResource(R.color.white);
-          ischeck=true;
-      }
-    }
+
+
+        //多个Activity嵌套时用this.parent否则异常
+        new CenterDialog(HomepageActivity.this)
+                .showDialog(R.layout.dilog_animal, 80, 50);
+        }
+
+
+
+//      if (ischeck) {
+//          moveup();
+//          //viewPager.setBackgroundResource(R.color.homepageback);
+//          ischeck=false;
+//      }else {
+//          movedown();
+//        //  viewPager.setBackgroundResource(R.color.white);
+//          ischeck=true;
+//      }
+
+    //移动到隐藏
     public void movedown(){
         AnimationSet animationSet1 = new AnimationSet(true);
         TranslateAnimation translateAnimation =
@@ -98,6 +112,7 @@ public class HomepageActivity extends FragmentActivity {
         animationSet1.setFillAfter(true);
         linearLayout.startAnimation(animationSet1);
     }
+    //移动出来
     public void moveup(){
         AnimationSet animationSet1 = new AnimationSet(true);
         TranslateAnimation translateAnimation =
@@ -111,6 +126,7 @@ public class HomepageActivity extends FragmentActivity {
         animationSet1.setFillAfter(true);
         linearLayout.startAnimation(animationSet1);
     }
+    //旋转动画
     public void rotating(){
         AnimationSet animationSet = new AnimationSet(true);
 

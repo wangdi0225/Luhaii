@@ -46,10 +46,8 @@ public class MyFragment extends Fragment {
         public void onClick(View v) {
             switch (v.getId()){
                 case R.id.qiandao:
-
                     break;
                 case R.id.ismy:
-
                     break;
                 case R.id.jifeng:
                     intent.setClass(getActivity(), JiFenShangChengActivity.class);
@@ -69,7 +67,4 @@ public class MyFragment extends Fragment {
             }
         }
     };
-
-
-
     }

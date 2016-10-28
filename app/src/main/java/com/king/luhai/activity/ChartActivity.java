@@ -42,45 +42,27 @@ public class ChartActivity extends Activity implements View.OnClickListener {
         initView();
         initData();
     }
-
-
-
-
-
     public void initView(){
         users_listView=(ListView)findViewById(R.id.users_listView);
         users_back=(TextView)findViewById(R.id.users_back);
         users_liaotian=(TextView)findViewById(R.id.users_liaotian);
-
         users_shuohua=(ImageView)this.findViewById(R.id.users_shuohua);
-
         users_biaoqing=(ImageView)findViewById(R.id.users_biaoqing);
         users_tianjia=(ImageView)findViewById(R.id.users_tianjia);
-
         users_edit=(EditText)findViewById(R.id.users_edit);
-
         users_back.setOnClickListener(this);
         users_shuohua.setOnClickListener(this);
-
-
     };
 
     public void initData(){
 
     };
 
-
-
-
     @Override
     public void onClick(View view) {
              switch (view.getId()){
                  case R.id.users_back:
-
                  break;
-
-
-
              };
     }
 }

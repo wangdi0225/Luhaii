@@ -197,6 +197,7 @@ public class HomepageFragment extends Fragment {
 
     private void whatOption() {
         what.incrementAndGet();
+
         if (what.get() > imageViews.length - 1) {
             what.getAndAdd(-4);
         }

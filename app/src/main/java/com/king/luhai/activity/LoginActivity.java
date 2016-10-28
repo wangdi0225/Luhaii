@@ -83,6 +83,9 @@ public class LoginActivity extends Activity{
                     Toast.makeText(LoginActivity.this,"头像",Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.denglu_denglu:
+
+                    intent.setClass(LoginActivity.this,HomepageActivity.class);
+                    startActivity(intent);
                     login();
                     String name = editTextzh.getText().toString();
                     String pswd = editTextmm.getText().toString();

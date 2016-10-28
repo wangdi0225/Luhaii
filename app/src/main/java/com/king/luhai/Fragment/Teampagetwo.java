@@ -15,9 +15,6 @@ public class Teampagetwo extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.item_teampagetwo, container, false);
-
-
-
         return v;
 
     }
